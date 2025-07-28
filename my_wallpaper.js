@@ -30,6 +30,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //how to add an if statement?
   //use variables (let =) in diagonal triangles to make points more clear
 
+  //Behind square shape - was going to do triangles but square more efficient!
+  square(size2, size2, 80)
+  
   //back larger star triangles
   //centre diamond of back star
   beginShape();
@@ -41,8 +44,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(size2, 100);
 
   endShape(CLOSE);
-
-  square(size2, size2, 80)
 
   //diagonal middle triangles
   //top right triangle
