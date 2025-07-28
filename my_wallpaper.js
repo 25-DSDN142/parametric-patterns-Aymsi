@@ -21,8 +21,12 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(0); //want this to end up being dark navy - like a night sky?
+  background(60); //want this to end up being dark navy - like a night sky?
 }
+
+ let leftpoint = 80
+ let rightpoint = 120
+ let pointlength = 20
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
@@ -79,4 +83,21 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(70 + size1, 100);
 
   endShape(CLOSE);
+
+  //going to originally work on this infront so I can see it. 
+  //drawig shape with vertex points to form shape as if i was making the triangles based off of a square's points
+  
+  beginShape();
+
+  vertex(leftpoint, 80);
+  vertex(100, pointlength);
+  vertex(rightpoint, 80);
+  vertex(200 - pointlength, 100);
+  vertex(rightpoint, 120);
+  vertex(100, 200 - pointlength);
+  vertex(leftpoint, 120);
+  vertex(pointlength, 100);
+  
+  endShape(CLOSE);
+
 }
