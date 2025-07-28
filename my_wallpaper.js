@@ -1,8 +1,10 @@
 //your parameter variables go here!
 //I will edit this when I understand what my parameters will be, eg could change petal length / petal width
-let rect_width  = 20;
-let rect_height = 30;
-
+let size1 = 20
+let size2 = 60
+let trianglelength = 50
+let topsquareline = 90
+let bottomsquareline = 110
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -23,32 +25,56 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
-  var petallength = 80;
+  //the goal is for every triangle of the piece to be a different shade of the star, looking like its shining
+  //gives perameters to change, i wonder if i could randomly change from a selection of colours?
+  //how to add an if statement?
+  //use variables (let =) in diagonal triangles to make points more clear
 
-  noStroke()
-  fill(255, 66, 167)
-  //outside back petals
-  ellipse(135, 65, petallength, petallength);
-  ellipse(65, 65, petallength, petallength);
-  ellipse(65, 135, petallength, petallength);
-  ellipse(135, 135, petallength, petallength);
+  //back larger star triangles
+  //centre diamond of back star
+  beginShape();
 
-  fill(247, 119, 187)
-  //petals
-  ellipse(100, 145, 45, petallength);
-  ellipse(100, 55, 45, petallength);
-  ellipse(150, 100, petallength, 45);
-  ellipse(50, 100, petallength, 45);
+  //adding each point of the diamond
+  vertex(100, size2);
+  vertex(size2 + 80, 100);
+  vertex(100, size2 + 80);
+  vertex(size2, 100);
 
-  fill(255, 166, 213)
-  //insidepetals
-  ellipse(125, 75, petallength - 30, 50);
-  ellipse(75, 75, petallength - 30, 50);
-  ellipse(75, 125, petallength - 30, 50);
-  ellipse(125, 125, petallength - 30, 50);
+  endShape(CLOSE);
 
-  fill(255, 247, 138)
-  //centre circle
-  ellipse(100, 100, 45, 45);
+  square(size2, size2, 80)
+
+  //diagonal middle triangles
+  //top right triangle
+  triangle(90, 90, 110, 110, 150, trianglelength);
+  //bottom right triangle
+  triangle(110, 90, 90, 110, 150, trianglelength + 100);
+  //bottom left triangle
+  triangle(90, 90, 110, 110, trianglelength, trianglelength + 100);
+  //toplefttriangle
+  triangle(90, 110, 110, 90, trianglelength, trianglelength);
+
+  //inside star triangles
+  //centre square of star
+  square(90, 90, size1);
+  //topinsidetriangle
+  triangle(90, 90, 110, 90, 100, trianglelength);
+  //rightinsidetriangle
+  triangle(110, 90, 110, 110, trianglelength + 100, 100);
+  //bottominsidetriangle
+  triangle(90, 110, 110, 110, 100, trianglelength + 100);
+  //leftinsidetriangle
+  triangle(90, 90, 90, 110, trianglelength, 100);
   
+  //very centre star diamond
+  //(ontop of centre square)
+   beginShape();
+
+  //adding each point of the diamond
+  vertex(100, size1 + 70);
+  vertex(size1 + 90, 100);
+  vertex(100, 90 + size1);
+  vertex(70 + size1, 100);
+
+  endShape(CLOSE);
 }
