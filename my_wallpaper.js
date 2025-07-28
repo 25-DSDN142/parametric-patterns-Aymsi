@@ -35,6 +35,21 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //how to add an if statement?
   //use variables (let =) in diagonal triangles to make points more clear
 
+  //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
+  
+  beginShape();
+
+  vertex(leftpoint, 80);
+  vertex(100, pointlength);
+  vertex(rightpoint, 80);
+  vertex(200 - pointlength, 100);
+  vertex(rightpoint, 120);
+  vertex(100, 200 - pointlength);
+  vertex(leftpoint, 120);
+  vertex(pointlength, 100);
+  
+  endShape(CLOSE);
+
   //Behind square shape - was going to do triangles but square more efficient!
   square(size2, size2, 80)
 
@@ -84,20 +99,5 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   endShape(CLOSE);
 
-  //going to originally work on this infront so I can see it. 
-  //drawig shape with vertex points to form shape as if i was making the triangles based off of a square's points
-  
-  beginShape();
-
-  vertex(leftpoint, 80);
-  vertex(100, pointlength);
-  vertex(rightpoint, 80);
-  vertex(200 - pointlength, 100);
-  vertex(rightpoint, 120);
-  vertex(100, 200 - pointlength);
-  vertex(leftpoint, 120);
-  vertex(pointlength, 100);
-  
-  endShape(CLOSE);
 
 }
