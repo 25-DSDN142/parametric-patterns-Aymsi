@@ -16,11 +16,12 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
+  //note: can change offset to change how tiling displays to fill screen/area
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
 function wallpaper_background() {
-  background(0); //light honeydew green colour
+  background(0); //want this to end up being dark navy - like a night sky?
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -32,7 +33,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   //Behind square shape - was going to do triangles but square more efficient!
   square(size2, size2, 80)
-  
+
   //back larger star triangles
   //centre diamond of back star
   beginShape();
