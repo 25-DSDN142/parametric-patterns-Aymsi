@@ -7,7 +7,7 @@ let topsquareline = 90
 let bottomsquareline = 110
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH???
   
   pWallpaper.resolution(FIT_TO_SCREEN);
