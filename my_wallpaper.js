@@ -36,7 +36,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //use variables (let =) in diagonal triangles to make points more clear
 
   //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
-  
+
   beginShape();
 
   vertex(leftpoint, 80);
@@ -51,7 +51,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   endShape(CLOSE);
 
   //Behind square shape - was going to do triangles but square more efficient!
-  square(size2, size2, 80)
+  square(size2 + 5, size2 + 5, 70)
 
   //back larger star triangles
   //centre diamond of back star
