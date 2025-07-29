@@ -1,14 +1,10 @@
 //your parameter variables go here!
 //I will edit this when I understand what my parameters will be, eg could change petal length / petal width
-let size1 = 20
-let size2 = 60
-let trianglelength = 50
-let topsquareline = 90
-let bottomsquareline = 110
+
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH???
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
@@ -17,12 +13,19 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   //note: can change offset to change how tiling displays to fill screen/area
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
   background(60); //want this to end up being dark navy - like a night sky?
 }
+
+let size1 = 20
+let size2 = 60
+let trianglelength = 50
+
+let topsquareline = 90
+let bottomsquareline = 110
 
  let leftpoint = 80
  let rightpoint = 120
@@ -40,13 +43,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   beginShape();
 
   vertex(leftpoint, 80);
-  vertex(100, pointlength);
+  vertex(100, pointlength - 20);
   vertex(rightpoint, 80);
-  vertex(200 - pointlength, 100);
+  vertex(200 - pointlength + 20, 100);
   vertex(rightpoint, 120);
-  vertex(100, 200 - pointlength);
+  vertex(100, 200 - pointlength + 20);
   vertex(leftpoint, 120);
-  vertex(pointlength, 100);
+  vertex(pointlength - 20, 100);
   
   endShape(CLOSE);
 
@@ -98,6 +101,5 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(70 + size1, 100);
 
   endShape(CLOSE);
-
 
 }
