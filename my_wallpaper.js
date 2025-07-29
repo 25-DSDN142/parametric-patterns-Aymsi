@@ -31,6 +31,8 @@ let bottomsquareline = 110
  let rightpoint = 120
  let pointlength = 20
 
+ let connecttoedge = 20
+
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
   //the goal is for every triangle of the piece to be a different shade of the star, looking like its shining
@@ -43,13 +45,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   beginShape();
 
   vertex(leftpoint, 80);
-  vertex(100, pointlength - 20);
+  vertex(100, pointlength - connecttoedge);
   vertex(rightpoint, 80);
-  vertex(200 - pointlength + 20, 100);
+  vertex(200 - pointlength + connecttoedge, 100);
   vertex(rightpoint, 120);
-  vertex(100, 200 - pointlength + 20);
+  vertex(100, 200 - pointlength + connecttoedge);
   vertex(leftpoint, 120);
-  vertex(pointlength - 20, 100);
+  vertex(pointlength - connecttoedge, 100);
   
   endShape(CLOSE);
 
