@@ -17,7 +17,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(60); //want this to end up being dark navy - like a night sky?
+  background(41, 80, 107); //want this to end up being dark navy - like a night sky?
 }
 
 let size1 = 20
