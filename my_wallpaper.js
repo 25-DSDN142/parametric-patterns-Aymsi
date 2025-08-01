@@ -3,11 +3,11 @@
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -47,13 +47,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   beginShape();
 
   vertex(leftpoint, 80);
-  vertex(100, pointlength - connecttoedge);
+  vertex(100, pointlength);
   vertex(rightpoint, 80);
-  vertex(200 - pointlength + connecttoedge, 100);
+  vertex(200 - pointlength, 100);
   vertex(rightpoint, 120);
-  vertex(100, 200 - pointlength + connecttoedge);
+  vertex(100, 200 - pointlength);
   vertex(leftpoint, 120);
-  vertex(pointlength - connecttoedge, 100);
+  vertex(pointlength, 100);
   
   endShape(CLOSE);
 
