@@ -3,7 +3,7 @@
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
   pWallpaper.resolution(FIT_TO_SCREEN);
@@ -39,9 +39,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //gives perameters to change, i wonder if i could randomly change from a selection of colours?
   //how to add an if statement?
   //use variables (let =) in diagonal triangles to make points more clear
-
+  
   //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
-
+  fill(255, 218, 97); //vibrant yellow colour
   beginShape();
 
   vertex(leftpoint, 80);
@@ -56,10 +56,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   endShape(CLOSE);
 
   //Behind square shape - was going to do triangles but square more efficient!
+  fill(255, 226, 138); //light yellow (middle colour)
   square(size2 + 5, size2 + 5, 70)
 
   //back larger star triangles
   //centre diamond of back star
+  fill(255, 244, 191); //lightest yellow
   beginShape();
 
   //adding each point of the diamond
@@ -70,6 +72,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   endShape(CLOSE);
 
+  fill(255, 218, 97); //vibrant yellow
   //diagonal middle triangles
   //top right triangle
   triangle(90, 90, 110, 110, 150, trianglelength);
@@ -82,8 +85,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   //inside star triangles
   //centre square of star
+  fill(255, 226, 138);
   square(90, 90, size1);
   //topinsidetriangle
+  fill(255, 244, 191); //lightest yellow
   triangle(90, 90, 110, 90, 100, trianglelength);
   //rightinsidetriangle
   triangle(110, 90, 110, 110, trianglelength + 100, 100);
@@ -94,6 +99,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
   //very centre star diamond
   //(ontop of centre square)
+  fill(255, 244, 191); //lightest yellow
    beginShape();
 
   //adding each point of the diamond
