@@ -1,25 +1,6 @@
 //your parameter variables go here!
 //I will edit this when I understand what my parameters will be, eg could change petal length / petal width
-
-
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
-  
-  pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
-
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
-  //note: can change offset to change how tiling displays to fill screen/area
-  pWallpaper.grid_settings.row_offset  = 100;
-}
-
-function wallpaper_background() {
-  background(12, 39, 59); //want this to end up being dark navy - like a night sky?
-}
-
+//perameters not set in stone yet for altering - need to translate code into functions
 let size1 = 20
 let size2 = 60
 let trianglelength = 50
@@ -32,6 +13,24 @@ let bottomsquareline = 110
  let pointlength = 20
 
  let connecttoedge = 20
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
+  
+  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  //note: can change offset to change how tiling displays to fill screen/area
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+function wallpaper_background() {
+  background(12, 39, 59); //want this to end up being dark navy - like a night sky?
+}
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
