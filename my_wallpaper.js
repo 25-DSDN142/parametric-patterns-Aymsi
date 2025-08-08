@@ -44,19 +44,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   DrawSecondStarLayer();
  
+  DrawThirdStarLayer();
 
-  //back larger star triangles
-  //centre diamond of back star
-  fill(255, 244, 191); //lightest yellow
-  beginShape();
-
-  //adding each point of the diamond
-  vertex(100, size2);
-  vertex(size2 + 80, 100);
-  vertex(100, size2 + 80);
-  vertex(size2, 100);
-
-  endShape(CLOSE);
 
   fill(255, 218, 97); //vibrant yellow
   //diagonal middle triangles
@@ -124,5 +113,22 @@ function DrawSecondStarLayer () {
  //Behind square shape - was going to do triangles but square more efficient!
   fill(255, 226, 138); //light yellow (middle colour)
   square(size2 + 5, size2 + 5, 70)
+
+}
+
+function DrawThirdStarLayer () {
+
+  //back larger star triangles
+  //centre diamond of back star
+  fill(255, 244, 191); //lightest yellow
+  beginShape();
+
+  //adding each point of the diamond
+  vertex(100, size2);
+  vertex(size2 + 80, 100);
+  vertex(100, size2 + 80);
+  vertex(size2, 100);
+
+  endShape(CLOSE);
 
 }
