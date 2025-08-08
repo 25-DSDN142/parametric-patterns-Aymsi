@@ -159,10 +159,10 @@ function DrawFrontStarLayer () {
    beginShape();
 
   //adding each point of the diamond
-  vertex(100, size1 + 70);
-  vertex(size1 + 90, 100);
-  vertex(100, 90 + size1);
-  vertex(70 + size1, 100);
+  vertex(centrex, centrey - 10);
+  vertex(centrex + 10, centrey);
+  vertex(centrex, centrey + 10);
+  vertex(centrex - 10, centrey);
 
   endShape(CLOSE);
 
