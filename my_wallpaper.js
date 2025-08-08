@@ -8,10 +8,11 @@ let trianglelength = 50
 let topsquareline = 90
 let bottomsquareline = 110
 
+//DrawBackStarLayer Variables
  let leftpoint = 80
  let rightpoint = 120
  let outsidestarpointlength = 20
-
+//Perameter change for this - connect to edge added to extend star points to edge of box
  let connecttoedge = 20
 
  //adding centre point variables to change my code - wanted a centre reference point
@@ -62,14 +63,14 @@ function DrawBackStarLayer () {
   //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
   beginShape();
 
-  vertex(leftpoint, 80);
-  vertex(100, outsidestarpointlength);
-  vertex(rightpoint, 80);
-  vertex(200 - outsidestarpointlength, 100);
-  vertex(rightpoint, 120);
-  vertex(100, 200 - outsidestarpointlength);
-  vertex(leftpoint, 120);
-  vertex(outsidestarpointlength, 100);
+  vertex(leftpoint, centrey - 20);
+  vertex(centrex, outsidestarpointlength);
+  vertex(rightpoint, centrey - 20);
+  vertex(200 - outsidestarpointlength, centrey);
+  vertex(rightpoint, centrey + 20);
+  vertex(centrex, 200 - outsidestarpointlength);
+  vertex(leftpoint, centrey + 20);
+  vertex(outsidestarpointlength, centrey);
   
   endShape(CLOSE);
 
