@@ -15,8 +15,11 @@ let outsidestarpointlength = 20
 //Perameter change for this - connect to edge added to extend star points to edge of box
 let connecttoedge = 20
 
-let size1 = 20
+//DrawSecondStarLayer + DrawThirdStarLayer Variables
 let size2 = 60
+
+let size1 = 20
+
 let trianglelength = 50
 
 let topsquareline = 90
