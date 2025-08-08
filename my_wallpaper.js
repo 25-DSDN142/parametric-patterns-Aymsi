@@ -48,21 +48,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   DrawFourthStarLayer();
 
+  DrawFifthStarLayer();
 
 
-  //inside star triangles
-  //centre square of star
-  fill(255, 226, 138);
-  square(90, 90, size1);
-  //topinsidetriangle
-  fill(255, 244, 191); //lightest yellow
-  triangle(90, 90, 110, 90, 100, trianglelength);
-  //rightinsidetriangle
-  triangle(110, 90, 110, 110, trianglelength + 100, 100);
-  //bottominsidetriangle
-  triangle(90, 110, 110, 110, 100, trianglelength + 100);
-  //leftinsidetriangle
-  triangle(90, 90, 90, 110, trianglelength, 100);
   
   //very centre star diamond
   //(ontop of centre square)
@@ -137,5 +125,23 @@ function DrawFourthStarLayer () {
   triangle(90, 90, 110, 110, trianglelength, trianglelength + 100);
   //toplefttriangle
   triangle(90, 110, 110, 90, trianglelength, trianglelength);
+
+}
+
+function DrawFifthStarLayer () {
+
+  //inside star triangles
+  //centre square of star
+  fill(255, 226, 138);
+  square(90, 90, size1);
+  //topinsidetriangle
+  fill(255, 244, 191); //lightest yellow
+  triangle(90, 90, 110, 90, 100, trianglelength);
+  //rightinsidetriangle
+  triangle(110, 90, 110, 110, trianglelength + 100, 100);
+  //bottominsidetriangle
+  triangle(90, 110, 110, 110, 100, trianglelength + 100);
+  //leftinsidetriangle
+  triangle(90, 90, 90, 110, trianglelength, 100);
 
 }
