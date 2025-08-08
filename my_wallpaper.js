@@ -16,7 +16,7 @@ let bottomsquareline = 110
 
  //adding centre point variables to change my code - wanted a centre reference point
  //why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
- //plus also for implementing an if statement for adding multiple stars later on
+ //plus also for implementing an if statement for adding multiple stars later
  let centrex = 100
  let centrey = 100
 
@@ -75,7 +75,7 @@ function DrawBackStarLayer () {
 
 }
 
-function DrawSecondStarLayer () {
+//function DrawSecondStarLayer () {
 
  //Behind square shape - was going to do triangles but square more efficient!
   fill(255, 226, 138); //light yellow (middle colour)
@@ -83,7 +83,7 @@ function DrawSecondStarLayer () {
 
 }
 
-function DrawThirdStarLayer () {
+//function DrawThirdStarLayer () {
 
   //back larger star triangles
   //centre diamond of back star
@@ -100,7 +100,7 @@ function DrawThirdStarLayer () {
 
 }
 
-function DrawFourthStarLayer () {
+//function DrawFourthStarLayer () {
 
     fill(255, 218, 97); //vibrant yellow
   //diagonal middle triangles
@@ -115,7 +115,7 @@ function DrawFourthStarLayer () {
 
 }
 
-function DrawFifthStarLayer () {
+//function DrawFifthStarLayer () {
 
   //inside star triangles
   //centre square of star
@@ -133,7 +133,7 @@ function DrawFifthStarLayer () {
 
 }
 
-function DrawFrontStarLayer () {
+//function DrawFrontStarLayer () {
 
   //very centre star diamond
   //(ontop of centre square)
