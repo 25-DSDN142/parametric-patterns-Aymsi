@@ -46,17 +46,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  
   DrawThirdStarLayer();
 
+  DrawFourthStarLayer();
 
-  fill(255, 218, 97); //vibrant yellow
-  //diagonal middle triangles
-  //top right triangle
-  triangle(90, 90, 110, 110, 150, trianglelength);
-  //bottom right triangle
-  triangle(110, 90, 90, 110, 150, trianglelength + 100);
-  //bottom left triangle
-  triangle(90, 90, 110, 110, trianglelength, trianglelength + 100);
-  //toplefttriangle
-  triangle(90, 110, 110, 90, trianglelength, trianglelength);
+
 
   //inside star triangles
   //centre square of star
@@ -130,5 +122,20 @@ function DrawThirdStarLayer () {
   vertex(size2, 100);
 
   endShape(CLOSE);
+
+}
+
+function DrawFourthStarLayer () {
+
+    fill(255, 218, 97); //vibrant yellow
+  //diagonal middle triangles
+  //top right triangle
+  triangle(90, 90, 110, 110, 150, trianglelength);
+  //bottom right triangle
+  triangle(110, 90, 90, 110, 150, trianglelength + 100);
+  //bottom left triangle
+  triangle(90, 90, 110, 110, trianglelength, trianglelength + 100);
+  //toplefttriangle
+  triangle(90, 110, 110, 90, trianglelength, trianglelength);
 
 }
