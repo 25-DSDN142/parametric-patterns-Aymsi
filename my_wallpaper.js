@@ -18,7 +18,7 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
-  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN
+  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -34,12 +34,6 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
-  //the goal is for every triangle of the piece to be a different shade of the star, looking like its shining
-  //gives perameters to change, i wonder if i could randomly change from a selection of colours?
-  //how to add an if statement?
-  //use variables (let =) in diagonal triangles to make points more clear
-
-  //goal: make each layer of the star (triangles/shapes) its own function
   DrawBackStarLayer();
 
   DrawSecondStarLayer();
@@ -53,6 +47,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFrontStarLayer();
 }
 
+//Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 function DrawBackStarLayer () {
 
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
@@ -148,3 +143,7 @@ function DrawFrontStarLayer () {
   endShape(CLOSE);
 
 }
+
+ //the goal is for every triangle of the piece to be a different shade of the star, looking like its shining
+  //gives perameters to change, i wonder if i could randomly change from a selection of colours?
+  //how to add an if statement?
