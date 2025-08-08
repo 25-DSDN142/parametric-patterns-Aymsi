@@ -63,6 +63,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 }
 
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
+//making each function based around the centrex = 100, and centrey = 100 function
 function DrawBackStarLayer () {
 
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
