@@ -139,14 +139,15 @@ function DrawFifthStarLayer () {
 function DrawSixthStarLayer () {
 //inside star triangles
  //topinsidetriangle
+//first.x, first.y, second.x, second.y, third.x, third.y
   fill(255, 244, 191); //lightest yellow
-  triangle(90, 90, 110, 90, 100, trianglelength);
+  triangle(centrex - 10, centrey - 10, centrex + 10, centrey - 10, centrex, centrey - trianglelength);
   //rightinsidetriangle
-  triangle(110, 90, 110, 110, trianglelength + 100, 100);
+  triangle(centrex + 10, centrey - 10, centrex + 10, centrey + 10, centrex + trianglelength, centrey);
   //bottominsidetriangle
-  triangle(90, 110, 110, 110, 100, trianglelength + 100);
+  triangle(centrex - 10, centrey + 10, centrex + 10, centrey + 10, centrex, centrey + trianglelength);
   //leftinsidetriangle
-  triangle(90, 90, 90, 110, trianglelength, 100);
+  triangle(centrex - 10, centrey - 10, centrex - 10, centrey + 10, centrex - trianglelength, centrey);
 
 
 }
