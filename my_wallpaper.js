@@ -38,6 +38,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //gives perameters to change, i wonder if i could randomly change from a selection of colours?
   //how to add an if statement?
   //use variables (let =) in diagonal triangles to make points more clear
+
+  //goal: make each layer of the star (triangles/shapes) its own function
   
   //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(255, 218, 97); //vibrant yellow colour
