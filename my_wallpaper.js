@@ -60,6 +60,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   DrawFifthStarLayer();
 
+  DrawSixthStarLayer();
+
   DrawFrontStarLayer();
 }
 
@@ -132,7 +134,11 @@ function DrawFifthStarLayer () {
   //centre square of star
   fill(255, 226, 138);
   square(90, 90, size1);
-  //topinsidetriangle
+
+}
+
+function DrawSixthStarLayer () {
+ //topinsidetriangle
   fill(255, 244, 191); //lightest yellow
   triangle(90, 90, 110, 90, 100, trianglelength);
   //rightinsidetriangle
@@ -141,6 +147,7 @@ function DrawFifthStarLayer () {
   triangle(90, 110, 110, 110, 100, trianglelength + 100);
   //leftinsidetriangle
   triangle(90, 90, 90, 110, trianglelength, 100);
+
 
 }
 
