@@ -17,6 +17,7 @@ let connecttoedge = 20
 
 //DrawSecondStarLayer + DrawThirdStarLayer Variables
 let size2 = 60
+let squarewidth = 70
 
 let size1 = 20
 
@@ -87,7 +88,7 @@ function DrawSecondStarLayer () {
 
  //Behind square shape - was going to do triangles but square more efficient!
   fill(255, 226, 138); //light yellow (middle colour)
-  square(size2 + 5, size2 + 5, 70)
+  square(centrex - 35, centrey - 35, squarewidth)
 
 }
 
