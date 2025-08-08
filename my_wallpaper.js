@@ -15,7 +15,7 @@ let bottomsquareline = 110
  let connecttoedge = 20
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
   pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN
@@ -40,23 +40,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //use variables (let =) in diagonal triangles to make points more clear
 
   //goal: make each layer of the star (triangles/shapes) its own function
-  
-  //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
-  fill(255, 218, 97); //vibrant yellow colour
-  stroke(161, 209, 255); 
-  //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
-  beginShape();
-
-  vertex(leftpoint, 80);
-  vertex(100, pointlength);
-  vertex(rightpoint, 80);
-  vertex(200 - pointlength, 100);
-  vertex(rightpoint, 120);
-  vertex(100, 200 - pointlength);
-  vertex(leftpoint, 120);
-  vertex(pointlength, 100);
-  
-  endShape(CLOSE);
+  DrawBackStarPiece();
 
   //Behind square shape - was going to do triangles but square more efficient!
   fill(255, 226, 138); //light yellow (middle colour)
@@ -111,6 +95,27 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(100, 90 + size1);
   vertex(70 + size1, 100);
 
+  endShape(CLOSE);
+
+}
+
+function DrawBackStarPiece () {
+
+   //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
+  fill(255, 218, 97); //vibrant yellow colour
+  stroke(161, 209, 255); 
+  //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
+  beginShape();
+
+  vertex(leftpoint, 80);
+  vertex(100, pointlength);
+  vertex(rightpoint, 80);
+  vertex(200 - pointlength, 100);
+  vertex(rightpoint, 120);
+  vertex(100, 200 - pointlength);
+  vertex(leftpoint, 120);
+  vertex(pointlength, 100);
+  
   endShape(CLOSE);
 
 }
