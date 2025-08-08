@@ -94,16 +94,15 @@ function DrawSecondStarLayer () {
 
 function DrawThirdStarLayer () {
 
-  //back larger star triangles
   //centre diamond of back star
   fill(255, 244, 191); //lightest yellow
   beginShape();
 
   //adding each point of the diamond
-  vertex(100, size2);
-  vertex(size2 + 80, 100);
-  vertex(100, size2 + 80);
-  vertex(size2, 100);
+  vertex(centrex, centrey - 40);
+  vertex(centrex + 40, centrey);
+  vertex(centrex, centrey + 40);
+  vertex(centrex - 40, centrey);
 
   endShape(CLOSE);
 
