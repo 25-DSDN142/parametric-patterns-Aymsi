@@ -40,11 +40,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //use variables (let =) in diagonal triangles to make points more clear
 
   //goal: make each layer of the star (triangles/shapes) its own function
-  DrawBackStarPiece();
+  DrawBackStarLayer();
 
-  //Behind square shape - was going to do triangles but square more efficient!
-  fill(255, 226, 138); //light yellow (middle colour)
-  square(size2 + 5, size2 + 5, 70)
+  DrawSecondStarLayer();
+ 
 
   //back larger star triangles
   //centre diamond of back star
@@ -99,7 +98,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 }
 
-function DrawBackStarPiece () {
+function DrawBackStarLayer () {
 
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(255, 218, 97); //vibrant yellow colour
@@ -117,5 +116,13 @@ function DrawBackStarPiece () {
   vertex(pointlength, 100);
   
   endShape(CLOSE);
+
+}
+
+function DrawSecondStarLayer () {
+
+ //Behind square shape - was going to do triangles but square more efficient!
+  fill(255, 226, 138); //light yellow (middle colour)
+  square(size2 + 5, size2 + 5, 70)
 
 }
