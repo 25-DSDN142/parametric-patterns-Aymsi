@@ -9,25 +9,17 @@ let centrex = 100
 let centrey = 100
 
 //DrawBackStarLayer Variables
-let leftpoint = 80
-let rightpoint = 120
+let leftpoint = centrex - 20
+let rightpoint = centrex + 20
 let outsidestarpointlength = 20
 //Perameter change for this - connect to edge added to extend star points to edge of box
 let connecttoedge = 20
 
 //DrawSecondStarLayer + DrawFifthStarLayer Variables
-let size2 = 60
 let squarewidth = 70
 
-let size1 = 20
-
-//DrawFourthStarLayer Variables
+//DrawFourthStarLayer + DrawSixthStarLayer Variables
 let trianglelength = 50
-
-let topsquareline = 90
-let bottomsquareline = 110
-
-
 
 
 function setup_wallpaper(pWallpaper) {
