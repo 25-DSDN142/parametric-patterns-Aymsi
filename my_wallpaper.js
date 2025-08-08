@@ -15,7 +15,7 @@ let outsidestarpointlength = 20
 //Perameter change for this - connect to edge added to extend star points to edge of box
 let connecttoedge = 20
 
-//DrawSecondStarLayer Variables
+//DrawSecondStarLayer + DrawFifthStarLayer Variables
 let size2 = 60
 let squarewidth = 70
 
@@ -130,14 +130,14 @@ function DrawFourthStarLayer () {
 
 function DrawFifthStarLayer () {
 
-  //inside star triangles
   //centre square of star
   fill(255, 226, 138);
-  square(90, 90, size1);
+  square(centrex - 10, centrey - 10, squarewidth - 50);
 
 }
 
 function DrawSixthStarLayer () {
+//inside star triangles
  //topinsidetriangle
   fill(255, 244, 191); //lightest yellow
   triangle(90, 90, 110, 90, 100, trianglelength);
