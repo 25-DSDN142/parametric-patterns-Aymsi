@@ -10,7 +10,7 @@ let bottomsquareline = 110
 
  let leftpoint = 80
  let rightpoint = 120
- let pointlength = 20
+ let outsidestarpointlength = 20
 
  let connecttoedge = 20
 
@@ -63,13 +63,13 @@ function DrawBackStarLayer () {
   beginShape();
 
   vertex(leftpoint, 80);
-  vertex(100, pointlength);
+  vertex(100, outsidestarpointlength);
   vertex(rightpoint, 80);
-  vertex(200 - pointlength, 100);
+  vertex(200 - outsidestarpointlength, 100);
   vertex(rightpoint, 120);
-  vertex(100, 200 - pointlength);
+  vertex(100, 200 - outsidestarpointlength);
   vertex(leftpoint, 120);
-  vertex(pointlength, 100);
+  vertex(outsidestarpointlength, 100);
   
   endShape(CLOSE);
 
