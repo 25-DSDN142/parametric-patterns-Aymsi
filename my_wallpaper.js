@@ -14,6 +14,12 @@ let bottomsquareline = 110
 
  let connecttoedge = 20
 
+ //adding centre point variables to change my code - wanted a centre reference point
+ //why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
+ //plus also for implementing an if statement for adding multiple stars later on
+ let centrex = 100
+ let centrey = 100
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
