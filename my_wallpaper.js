@@ -50,21 +50,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   DrawFifthStarLayer();
 
-
-  
-  //very centre star diamond
-  //(ontop of centre square)
-  fill(255, 244, 191); //lightest yellow
-   beginShape();
-
-  //adding each point of the diamond
-  vertex(100, size1 + 70);
-  vertex(size1 + 90, 100);
-  vertex(100, 90 + size1);
-  vertex(70 + size1, 100);
-
-  endShape(CLOSE);
-
+  DrawFrontStarLayer();
 }
 
 function DrawBackStarLayer () {
@@ -143,5 +129,22 @@ function DrawFifthStarLayer () {
   triangle(90, 110, 110, 110, 100, trianglelength + 100);
   //leftinsidetriangle
   triangle(90, 90, 90, 110, trianglelength, 100);
+
+}
+
+function DrawFrontStarLayer () {
+
+  //very centre star diamond
+  //(ontop of centre square)
+  fill(255, 244, 191); //lightest yellow
+   beginShape();
+
+  //adding each point of the diamond
+  vertex(100, size1 + 70);
+  vertex(size1 + 90, 100);
+  vertex(100, 90 + size1);
+  vertex(70 + size1, 100);
+
+  endShape(CLOSE);
 
 }
