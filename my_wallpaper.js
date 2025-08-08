@@ -1,6 +1,20 @@
 //your parameter variables go here!
 //I will edit this when I understand what my parameters will be, eg could change petal length / petal width
 //perameters not set in stone yet for altering - need to translate code into functions
+
+//adding centre point variables to change my code - wanted a centre reference point
+//why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
+//plus also for implementing an if statement for adding multiple stars later
+let centrex = 100
+let centrey = 100
+
+//DrawBackStarLayer Variables
+let leftpoint = 80
+let rightpoint = 120
+let outsidestarpointlength = 20
+//Perameter change for this - connect to edge added to extend star points to edge of box
+let connecttoedge = 20
+
 let size1 = 20
 let size2 = 60
 let trianglelength = 50
@@ -8,18 +22,8 @@ let trianglelength = 50
 let topsquareline = 90
 let bottomsquareline = 110
 
-//DrawBackStarLayer Variables
- let leftpoint = 80
- let rightpoint = 120
- let outsidestarpointlength = 20
-//Perameter change for this - connect to edge added to extend star points to edge of box
- let connecttoedge = 20
 
- //adding centre point variables to change my code - wanted a centre reference point
- //why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
- //plus also for implementing an if statement for adding multiple stars later
- let centrex = 100
- let centrey = 100
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
