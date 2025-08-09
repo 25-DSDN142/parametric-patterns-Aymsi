@@ -3,7 +3,7 @@
 //adding centre point variables to change my code - wanted a centre reference point
 //why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
 //plus also for implementing an if statement for adding multiple stars later
-let centrex = 100
+let centrex = 150
 let centrey = 100
 
 //DrawBackStarLayer Variables
@@ -82,6 +82,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 //making each function based around the centrex = 100, and centrey = 100 function
 function DrawBackStarLayer () {
+  scale(scaleFactor);
 
   let brightyellow = color(255, 218, 97);
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
@@ -112,6 +113,7 @@ function DrawBackStarLayer () {
 }
 
 function DrawSecondStarLayer () {
+  scale(scaleFactor);
 
   let brightyellow = color(255, 218, 97);
  //Behind square shape - was going to do triangles but square more efficient!
@@ -123,6 +125,7 @@ function DrawSecondStarLayer () {
 }
 
 function DrawThirdStarLayer () {
+  scale(scaleFactor);
 
   let lightyellow = color(255, 244, 191);
   //centre diamond of back star
@@ -142,6 +145,7 @@ function DrawThirdStarLayer () {
 }
 
 function DrawFourthStarLayer () {
+  scale(scaleFactor);
 
 let lightblue = color(181, 227, 255);
 fill(lightblue); //light blue original
@@ -168,6 +172,8 @@ fill(lightblue); //light blue original
 }
 
 function DrawFifthStarLayer () {
+  scale(scaleFactor);
+
 let brightyellow = color(255, 218, 97);
   //centre square of star
   fill(brightyellow); //bright yellow original
@@ -178,6 +184,7 @@ let brightyellow = color(255, 218, 97);
 }
 
 function DrawSixthStarLayer () {
+  scale(scaleFactor);
 //inside star triangles
  //topinsidetriangle
 
@@ -205,6 +212,8 @@ let lightyellow = color(255, 244, 191);
 }
 
 function DrawFrontStarLayer () {
+  scale(scaleFactor);
+
   //very centre star diamond
   //(ontop of centre square)
   let lightyellow = color(255, 244, 191);
