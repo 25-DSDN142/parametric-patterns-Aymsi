@@ -19,6 +19,9 @@ let squarewidth = 70
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
 let trianglelength = 50
 
+//custom stroke weight variables
+let thickerstroke = 4
+let standardstroke = 2
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -49,12 +52,18 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFrontStarLayer();
 }
 
+if (strokeWeight = (thickerstroke)) {
+
+  stroke(0);
+
+}
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 //making each function based around the centrex = 100, and centrey = 100 function
 function DrawBackStarLayer () {
 
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(255, 218, 97); //vibrant yellow colour
+  strokeWeight(thickerstroke); //thicker back stroke w custom variable
   stroke(161, 209, 255); 
   //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
   beginShape();
@@ -76,6 +85,7 @@ function DrawSecondStarLayer () {
 
  //Behind square shape - was going to do triangles but square more efficient!
   fill(255, 226, 138); //light yellow (middle colour)
+  strokeWeight (standardstroke);
   square(centrex - 35, centrey - 35, squarewidth)
 
 }
@@ -84,6 +94,7 @@ function DrawThirdStarLayer () {
 
   //centre diamond of back star
   fill(255, 244, 191); //lightest yellow
+  
   beginShape();
 
   //adding each point of the diamond
@@ -98,7 +109,8 @@ function DrawThirdStarLayer () {
 
 function DrawFourthStarLayer () {
 
-    fill(255, 218, 97); //vibrant yellow
+  fill(255, 218, 97); //vibrant yellow
+  strokeWeight (thickerstroke);
   //diagonal middle triangles
   //top right triangle
   //first.x, first.y, second.x, second.y, third.x, third.y
@@ -116,6 +128,7 @@ function DrawFifthStarLayer () {
 
   //centre square of star
   fill(255, 226, 138);
+  strokeWeight (standardstroke);
   square(centrex - 10, centrey - 10, squarewidth - 50);
 
 }
