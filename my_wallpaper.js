@@ -40,9 +40,6 @@ function wallpaper_background() {
   background(12, 39, 59); //want this to end up being dark navy - like a night sky?
 }
 
-//161, 209, 255
-let colour = (161, 209, 255)
-
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
   DrawBackStarLayer();
@@ -54,11 +51,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFrontStarLayer();
 }
 
- if (standardstroke > 3) {
-  let colour = (0)
-} else {
-  let colour = (161, 209, 255)
-}
+//161, 209, 255
+let basecolour = color(161, 209, 255);
+let thickcolour = color(255);
 
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 //making each function based around the centrex = 100, and centrey = 100 function
@@ -66,9 +61,12 @@ function DrawBackStarLayer () {
 
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(255, 218, 97); //vibrant yellow colour
-  stroke(colour);
+  stroke(thickcolour);
   strokeWeight(standardstroke + 2); //thicker back stroke w custom variable
   //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
+  
+
+
   beginShape();
 
   vertex(leftpoint, centrey - 20);
@@ -88,9 +86,9 @@ function DrawSecondStarLayer () {
 
  //Behind square shape - was going to do triangles but square more efficient!
   fill(255, 226, 138); //light yellow (middle colour)
-  strokeWeight (standardstroke);
-  stroke(colour);
-  square(centrex - 35, centrey - 35, squarewidth)
+  strokeWeight(standardstroke);
+  stroke(basecolour);
+  square(centrex - 35, centrey - 35, squarewidth);
 
 }
 
@@ -98,7 +96,7 @@ function DrawThirdStarLayer () {
 
   //centre diamond of back star
   fill(255, 244, 191); //lightest yellow
-  stroke(colour);
+  stroke(basecolour);
   beginShape();
 
   //adding each point of the diamond
@@ -115,7 +113,8 @@ function DrawFourthStarLayer () {
 
   fill(255, 218, 97); //vibrant yellow
   strokeWeight (standardstroke + 2);
-  stroke(colour);
+
+  stroke(basecolour);
   //diagonal middle triangles
   //top right triangle
   //first.x, first.y, second.x, second.y, third.x, third.y
@@ -134,7 +133,7 @@ function DrawFifthStarLayer () {
   //centre square of star
   fill(255, 226, 138);
   strokeWeight (standardstroke);
-  stroke(colour);
+  stroke(basecolour);
   square(centrex - 10, centrey - 10, squarewidth - 50);
 
 }
@@ -144,7 +143,7 @@ function DrawSixthStarLayer () {
  //topinsidetriangle
 //first.x, first.y, second.x, second.y, third.x, third.y
   fill(255, 244, 191); //lightest yellow
-  stroke(colour);
+  stroke(basecolour);
   triangle(centrex - 10, centrey - 10, centrex + 10, centrey - 10, centrex, centrey - trianglelength);
   //rightinsidetriangle
   triangle(centrex + 10, centrey - 10, centrex + 10, centrey + 10, centrex + trianglelength, centrey);
@@ -161,7 +160,7 @@ function DrawFrontStarLayer () {
   //very centre star diamond
   //(ontop of centre square)
   fill(255, 244, 191); //lightest yellow
-  stroke(colour);
+  stroke(basecolour);
    beginShape();
 
   //adding each point of the diamond
