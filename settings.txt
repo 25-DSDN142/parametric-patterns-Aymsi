@@ -48,6 +48,9 @@ let standardstroke = 2
 //lightblue
 //let lightblue = color(181, 227, 255); 
 
+//trying a variable for scale (scale is hard I might scrap this)
+let scaleFactor = 1
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
@@ -65,3 +68,59 @@ function setup_wallpaper(pWallpaper) {
 /////////////////////////////////
 
 Wallpaper 2:
+
+let centrex = 100
+let centrey = 100
+
+//DrawBackStarLayer Variables
+let leftpoint = centrex - 20
+let rightpoint = centrex + 20
+let outsidestarpointlength = 20
+//Perameter change for this - connect to edge added to extend star points to edge of box
+let connecttoedge = 20
+
+//DrawSecondStarLayer + DrawFifthStarLayer Variables
+let squarewidth = 70
+
+//DrawFourthStarLayer + DrawSixthStarLayer Variables
+let trianglelength = 90
+
+//custom stroke weight variables + used for if statements
+let standardstroke = 2
+
+//colour variables 
+//each colour variable had to be put under each layer triangle function to work properly
+
+//background colour
+//let backgroundcolour = color(3, 33, 54); 
+
+//brightyellow
+//let brightyellow = color(255, 218, 97); 
+
+//lightyellow
+//let lightyellow = color(255, 244, 191); 
+
+//lightblue
+//let lightblue = color(181, 227, 255); 
+
+//trying a variable for scale (scale is hard I might scrap this)
+let scaleFactor = 1
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
+  
+  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  //note: can change offset to change how tiling displays to fill screen/area
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 3:
+

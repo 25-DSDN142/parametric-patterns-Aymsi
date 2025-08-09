@@ -11,16 +11,16 @@ let leftpoint = centrex - 20
 let rightpoint = centrex + 20
 let outsidestarpointlength = 20
 //Perameter change for this - connect to edge added to extend star points to edge of box
-let connecttoedge = 20
+let connecttoedge = 0
 
 //DrawSecondStarLayer + DrawFifthStarLayer Variables
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 90
+let trianglelength = 50
 
 //custom stroke weight variables + used for if statements
-let standardstroke = 2
+let standardstroke = 5
 
 //colour variables 
 //each colour variable had to be put under each layer triangle function to work properly
@@ -37,6 +37,10 @@ let standardstroke = 2
 //lightblue
 //let lightblue = color(181, 227, 255); 
 
+//Stroke colours
+//let basestrokec = color(199, 236, 255); //base blue strokes
+//let thickstrokec = color(255); //white thick strokes
+
 //trying a variable for scale (scale is hard I might scrap this)
 let scaleFactor = 1
 
@@ -51,7 +55,7 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   //note: can change offset to change how tiling displays to fill screen/area
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 function wallpaper_background() {
@@ -85,14 +89,16 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 function DrawBackStarLayer () {
  scale(scaleFactor);
 
+  let basestrokec = color(199, 236, 255);
+  let thickstrokec = color(255);
   let brightyellow = color(255, 218, 97);
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(brightyellow); //bright yellow original
 
   if ((standardstroke + 2) > 2) {
-    stroke(255); // white stroke for thicker standard stroke + 2
+    stroke(thickstrokec); // white stroke for thicker standard stroke + 2
   } else {
-    stroke(199, 236, 255); // normal blue colour stroke for normal standardstroke
+    stroke(basestrokec); // normal blue colour stroke for normal standardstroke
   }
 
   strokeWeight(standardstroke + 2); //thicker back stroke w custom variable
@@ -148,13 +154,16 @@ function DrawThirdStarLayer () {
 function DrawFourthStarLayer () {
   scale(scaleFactor);
 
+  let basestrokec = color(199, 236, 255);
+  let thickstrokec = color(255);
+
 let lightblue = color(181, 227, 255);
 fill(lightblue); //light blue original
 
   if ((standardstroke + 2) > 2) {
-    stroke(255); // white stroke for thicker standard stroke + 2
+    stroke(thickstrokec); // white stroke for thicker standard stroke + 2
   } else {
-    stroke(199, 236, 255); // normal blue colour stroke for normal standardstroke
+    stroke(basestrokec); // normal blue colour stroke for normal standardstroke
   }
 
   strokeWeight (standardstroke + 2);
@@ -188,15 +197,17 @@ function DrawSixthStarLayer () {
   scale(scaleFactor);
 //inside star triangles
  //topinsidetriangle
+let basestrokec = color(199, 236, 255);
+  let thickstrokec = color(255);
 
 let lightyellow = color(255, 244, 191);
 
   fill(lightyellow); //light yellow original
 
     if ((standardstroke + 1) > 2) {
-    stroke(255); // white stroke for thicker standard stroke + 2
+    stroke(thickstrokec); // white stroke for thicker standard stroke + 2
   } else {
-    stroke(199, 236, 255); // normal blue colour stroke for normal standardstroke
+    stroke(basestrokec); // normal blue colour stroke for normal standardstroke
   }
 
   strokeWeight (standardstroke + 1);
