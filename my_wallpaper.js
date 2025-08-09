@@ -1,6 +1,4 @@
 //your parameter variables go here!
-//I will edit this when I understand what my parameters will be, eg could change petal length / petal width
-//perameters not set in stone yet for altering - need to translate code into functions
 
 //adding centre point variables to change my code - wanted a centre reference point
 //why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
@@ -43,17 +41,11 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
   DrawBackStarLayer();
-
   DrawSecondStarLayer();
- 
   DrawThirdStarLayer();
-
   DrawFourthStarLayer();
-
   DrawFifthStarLayer();
-
   DrawSixthStarLayer();
-
   DrawFrontStarLayer();
 }
 
