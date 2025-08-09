@@ -39,18 +39,18 @@ let standardstroke = 2
 //background colour
 //let backgroundcolour = color(3, 33, 54); 
 
-//brightyellow
-//let brightyellow = color(255, 218, 97); 
-
-//lightyellow
-//let lightyellow = color(255, 244, 191); 
-
-//lightblue
-//let lightblue = color(181, 227, 255); 
-
 //Stroke colours
 //let basestrokec = color(199, 236, 255); //base blue strokes
 //let thickstrokec = color(255); //white thick strokes
+
+//fill colours
+//let backlayerfill = color(255, 218, 97); //bright yellow
+//let secondlayerfill = color(255, 218, 97); //bright yellow
+//let thirdlayerfill = color(255, 244, 191); //light yellow
+//let fourthlayerfill = color(181, 227, 255); //light blue
+//let fifthlayerfill = color(255, 218, 97); //bright yellow
+//let sixthlayerfill = color(255, 244, 191); //light yellow
+//let frontlayerfill = color(255, 244, 191); //light yellow
 
 //trying a variable for scale (scale is hard I might scrap this)
 let scaleFactor = 1
@@ -98,19 +98,18 @@ let standardstroke = 2
 //background colour
 //let backgroundcolour = color(3, 33, 54); 
 
-//brightyellow
-//let brightyellow = color(255, 218, 97); 
-
-//lightyellow
-//let lightyellow = color(255, 244, 191); 
-
-//lightblue
-//let lightblue = color(181, 227, 255); 
-
 //Stroke colours
 //let basestrokec = color(199, 236, 255); //base blue strokes
 //let thickstrokec = color(255); //white thick strokes
 
+//fill colours
+//let backlayerfill = color(255, 218, 97); //bright yellow
+//let secondlayerfill = color(255, 218, 97); //bright yellow
+//let thirdlayerfill = color(255, 244, 191); //light yellow
+//let fourthlayerfill = color(181, 227, 255); //light blue
+//let fifthlayerfill = color(255, 218, 97); //bright yellow
+//let sixthlayerfill = color(255, 244, 191); //light yellow
+//let frontlayerfill = color(255, 244, 191); //light yellow
 
 //trying a variable for scale (scale is hard I might scrap this)
 let scaleFactor = 1

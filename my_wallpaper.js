@@ -44,6 +44,9 @@ let standardstroke = 2
 //trying a variable for scale (scale is hard I might scrap this)
 let scaleFactor = 1
 
+//middlestarX = 100
+//middlestarY = 100
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
@@ -65,19 +68,33 @@ function wallpaper_background() {
 
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  
+let middlestarX = 100
+let middlestarY = 100
+
   //trying to implement an if statement for scale function
   //if (centrex > 100) {
    // scaleFactor = 0.5;
 //  } else {
 //    scaleFactor = 1
 // }
-  DrawStar();
+  DrawStar(100, 100);
+  DrawStar(50, 50);
 
 }
 
-function DrawStar () { 
+//Creating my actual star in a function - so that I can draw/manipulate multiple stars under my_symbol function
+function DrawStar (middlestarX, middlestarY) { 
 //scale(scaleFactor);
+
+//Setting local functions so they draw according to their own measurements
+  let centrex = middlestarX;
+  let centrey = middlestarY;
+
+  // variables for code ref
+  let leftpoint = centrex - 20;
+  let rightpoint = centrex + 20;
+  let outsidestarpointlength = 20;
+  let connecttoedge = 0;
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
