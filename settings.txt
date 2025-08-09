@@ -48,6 +48,10 @@ let standardstroke = 2
 //lightblue
 //let lightblue = color(181, 227, 255); 
 
+//Stroke colours
+//let basestrokec = color(199, 236, 255); //base blue strokes
+//let thickstrokec = color(255); //white thick strokes
+
 //trying a variable for scale (scale is hard I might scrap this)
 let scaleFactor = 1
 
@@ -102,6 +106,11 @@ let standardstroke = 2
 
 //lightblue
 //let lightblue = color(181, 227, 255); 
+
+//Stroke colours
+//let basestrokec = color(199, 236, 255); //base blue strokes
+//let thickstrokec = color(255); //white thick strokes
+
 
 //trying a variable for scale (scale is hard I might scrap this)
 let scaleFactor = 1
