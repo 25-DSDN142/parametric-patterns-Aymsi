@@ -41,6 +41,12 @@ function wallpaper_background() {
   background(12, 39, 59); //want this to end up being dark navy - like a night sky?
 }
 
+if (thickerstroke > 1) {
+
+  stroke(0);
+
+}
+
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
   DrawBackStarLayer();
@@ -52,11 +58,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFrontStarLayer();
 }
 
-if (thickerstroke > 1) {
 
-  stroke(0);
-
-}
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 //making each function based around the centrex = 100, and centrey = 100 function
 function DrawBackStarLayer () {
