@@ -66,7 +66,6 @@ function DrawBackStarLayer () {
   fill(255, 218, 97); //vibrant yellow colour
 
   strokeWeight(standardstroke + 2); //thicker back stroke w custom variable
-  //stroke(161, 209, 255); //is this messing it up??
   //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
   beginShape();
 
