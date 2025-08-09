@@ -37,11 +37,13 @@ let standardstroke = 2
 //lightblue
 //let lightblue = color(181, 227, 255); 
 
+let scaleFactor = 1
+
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
-  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
+  pWallpaper.resolution(FIT_TO_SCREEN); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -59,6 +61,13 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
+  //trying to implement an if statement for scale function
+  if (centrex > 100) {
+    scaleFactor = 0.5;
+  } else {
+    scaleFactor = 1
+  }
+
   DrawBackStarLayer();
   DrawSecondStarLayer();
   DrawThirdStarLayer();
@@ -66,6 +75,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFifthStarLayer();
   DrawSixthStarLayer();
   DrawFrontStarLayer();
+
 }
 
 
