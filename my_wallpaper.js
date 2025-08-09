@@ -52,6 +52,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFrontStarLayer();
 }
 
+ if (standardstroke > 2) {
+  stroke(250); //TEST black stroke if thick
+} else {
+  stroke(161, 209, 255); //otherwise normal stroke colour
+}
 
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 //making each function based around the centrex = 100, and centrey = 100 function
@@ -60,12 +65,8 @@ function DrawBackStarLayer () {
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(255, 218, 97); //vibrant yellow colour
 
-  if (standardstroke > 2) {
-  stroke(0, 0, 0);
-}
-
   strokeWeight(standardstroke + 2); //thicker back stroke w custom variable
-  stroke(161, 209, 255); 
+  //stroke(161, 209, 255); //is this messing it up??
   //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
   beginShape();
 
