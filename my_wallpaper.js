@@ -53,11 +53,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFrontStarLayer();
 }
 
- if (standardstroke > 2) {
-  stroke(0); //TEST black stroke if thick
-} else {
-  stroke(161, 209, 255); //otherwise normal stroke colour
-}
+ if (standardstroke < thickerstroke) {
+  stroke(161, 209, 255); //normal stroke colour
+} 
 
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 //making each function based around the centrex = 100, and centrey = 100 function
