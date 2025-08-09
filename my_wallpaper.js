@@ -52,7 +52,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFrontStarLayer();
 }
 
-if (strokeWeight = (thickerstroke)) {
+if (thickerstroke > 1) {
 
   stroke(0);
 
