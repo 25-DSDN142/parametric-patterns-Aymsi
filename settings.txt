@@ -33,6 +33,21 @@ let trianglelength = 50
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
 
+//colour variables 
+//each colour variable had to be put under each layer triangle function to work properly
+
+//background colour
+//let backgroundcolour = color(3, 33, 54); 
+
+//brightyellow
+//let brightyellow = color(255, 218, 97); 
+
+//lightyellow
+//let lightyellow = color(255, 244, 191); 
+
+//lightblue
+//let lightblue = color(181, 227, 255); 
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design

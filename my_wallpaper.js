@@ -22,6 +22,21 @@ let trianglelength = 50
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
 
+//colour variables 
+//each colour variable had to be put under each layer triangle function to work properly
+
+//background colour
+//let backgroundcolour = color(3, 33, 54); 
+
+//brightyellow
+//let brightyellow = color(255, 218, 97); 
+
+//lightyellow
+//let lightyellow = color(255, 244, 191); 
+
+//lightblue
+//let lightblue = color(181, 227, 255); 
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
@@ -37,8 +52,10 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(3, 33, 54); //want this to end up being dark navy - like a night sky?
+  let backgroundcolour = color(3, 33, 54);
+  background(backgroundcolour); //want this to end up being dark navy - like a night sky?
 }
+
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
@@ -56,8 +73,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 //making each function based around the centrex = 100, and centrey = 100 function
 function DrawBackStarLayer () {
 
+  let brightyellow = color(255, 218, 97);
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
-  fill(255, 218, 97); //vibrant yellow colour
+  fill(brightyellow); //bright yellow original
 
   if ((standardstroke + 2) > 2) {
     stroke(255); // white stroke for thicker standard stroke + 2
@@ -85,8 +103,9 @@ function DrawBackStarLayer () {
 
 function DrawSecondStarLayer () {
 
+  let brightyellow = color(255, 218, 97);
  //Behind square shape - was going to do triangles but square more efficient!
-  fill(255, 226, 138); //light yellow (middle colour)
+  fill(brightyellow); //bright yellow original
   strokeWeight(standardstroke);
   stroke(199, 236, 255);
   square(centrex - 35, centrey - 35, squarewidth);
@@ -95,8 +114,9 @@ function DrawSecondStarLayer () {
 
 function DrawThirdStarLayer () {
 
+  let lightyellow = color(255, 244, 191);
   //centre diamond of back star
-  fill(255, 244, 191); //lightest yellow
+  fill(lightyellow); //lightest yellow original
   strokeWeight (standardstroke);
   stroke(199, 236, 255);
   beginShape();
@@ -113,7 +133,8 @@ function DrawThirdStarLayer () {
 
 function DrawFourthStarLayer () {
 
-fill(181, 227, 255); //light blue
+let lightblue = color(181, 227, 255);
+fill(lightblue); //light blue original
 
   if ((standardstroke + 2) > 2) {
     stroke(255); // white stroke for thicker standard stroke + 2
@@ -137,9 +158,9 @@ fill(181, 227, 255); //light blue
 }
 
 function DrawFifthStarLayer () {
-
+let brightyellow = color(255, 218, 97);
   //centre square of star
-  fill(255, 226, 138);
+  fill(brightyellow); //bright yellow original
   strokeWeight (standardstroke);
   stroke(199, 236, 255);
   square(centrex - 10, centrey - 10, squarewidth - 50);
@@ -149,8 +170,10 @@ function DrawFifthStarLayer () {
 function DrawSixthStarLayer () {
 //inside star triangles
  //topinsidetriangle
-//first.x, first.y, second.x, second.y, third.x, third.y
-  fill(255, 244, 191); //lightest yellow
+
+let lightyellow = color(255, 244, 191);
+
+  fill(lightyellow); //light yellow original
 
     if ((standardstroke + 1) > 2) {
     stroke(255); // white stroke for thicker standard stroke + 2
@@ -160,6 +183,7 @@ function DrawSixthStarLayer () {
 
   strokeWeight (standardstroke + 1);
   
+  //first.x, first.y, second.x, second.y, third.x, third.y
   triangle(centrex - 10, centrey - 10, centrex + 10, centrey - 10, centrex, centrey - trianglelength);
   //rightinsidetriangle
   triangle(centrex + 10, centrey - 10, centrex + 10, centrey + 10, centrex + trianglelength, centrey);
@@ -171,10 +195,11 @@ function DrawSixthStarLayer () {
 }
 
 function DrawFrontStarLayer () {
-
   //very centre star diamond
   //(ontop of centre square)
-  fill(255, 244, 191); //lightest yellow
+  let lightyellow = color(255, 244, 191);
+
+  fill(lightyellow); //light yellow original
   strokeWeight(standardstroke - 0.5);
   stroke(199, 236, 255);
    beginShape();
