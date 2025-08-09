@@ -28,18 +28,18 @@ let standardstroke = 2
 //background colour
 //let backgroundcolour = color(3, 33, 54); 
 
-//brightyellow
-//let brightyellow = color(255, 218, 97); 
-
-//lightyellow
-//let lightyellow = color(255, 244, 191); 
-
-//lightblue
-//let lightblue = color(181, 227, 255); 
-
 //Stroke colours
 //let basestrokec = color(199, 236, 255); //base blue strokes
 //let thickstrokec = color(255); //white thick strokes
+
+//fill colours
+//let backlayerfill = color(255, 218, 97); //bright yellow
+//let secondlayerfill = color(255, 218, 97); //bright yellow
+//let thirdlayerfill = color(255, 244, 191); //light yellow
+//let fourthlayerfill = color(181, 227, 255); //light blue
+//let fifthlayerfill = color(255, 218, 97); //bright yellow
+//let sixthlayerfill = color(255, 244, 191); //light yellow
+//let frontlayerfill = color(255, 244, 191); //light yellow
 
 //trying a variable for scale (scale is hard I might scrap this)
 let scaleFactor = 1
@@ -80,11 +80,17 @@ function DrawStar () {
 //scale(scaleFactor);
 
 //colour functions (need to be here so it runs properly)
+//stroke colours
   let basestrokec = color(199, 236, 255);
   let thickstrokec = color(255);
-  let brightyellow = color(255, 218, 97);
-  let lightyellow = color(255, 244, 191);
-  let lightblue = color(181, 227, 255);
+//fill colours
+let backlayerfill = color(255, 218, 97); //bright yellow
+let secondlayerfill = color(255, 218, 97); //bright yellow
+let thirdlayerfill = color(255, 244, 191); //light yellow
+let fourthlayerfill = color(181, 227, 255); //light blue
+let fifthlayerfill = color(255, 218, 97); //bright yellow
+let sixthlayerfill = color(255, 244, 191); //light yellow
+let frontlayerfill = color(255, 244, 191); //light yellow
 
 //if function for stroke to turn white if its thicker 
   if ((standardstroke + 2) > 2) {
@@ -95,7 +101,7 @@ function DrawStar () {
 
   strokeWeight(standardstroke + 2); //thicker back stroke w custom variable
   //colour options:15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
-  fill(brightyellow); //bright yellow original
+  fill(backlayerfill); //bright yellow original
   
   //Drawing back star layer
   beginShape();
@@ -113,14 +119,14 @@ function DrawStar () {
 
 //Drawing second star layer - Behind square shape - was going to do triangles but square more efficient!
 
-  fill(brightyellow); //bright yellow original
+  fill(secondlayerfill); //bright yellow original
   strokeWeight(standardstroke);
   stroke(basestrokec);
   square(centrex - 35, centrey - 35, squarewidth);
 
 //Drawing third star layer - centre diamond of back star
 
-  fill(lightyellow); //lightest yellow original
+  fill(thirdlayerfill); //lightest yellow original
   strokeWeight (standardstroke);
   stroke(199, 236, 255);
 
@@ -142,7 +148,7 @@ function DrawStar () {
     stroke(basestrokec); // normal blue colour stroke for normal standardstroke
   }
   
-  fill(lightblue); //light blue original
+  fill(fourthlayerfill); //light blue original
   strokeWeight (standardstroke + 2);
 
   //first.x, first.y, second.x, second.y, third.x, third.y
@@ -156,7 +162,7 @@ function DrawStar () {
 
 //Drawing fifth star layer - centre square of star
 
-  fill(brightyellow); //bright yellow original
+  fill(fifthlayerfill); //bright yellow original
   strokeWeight (standardstroke);
   stroke(basestrokec);
   square(centrex - 10, centrey - 10, squarewidth - 50);
@@ -170,7 +176,7 @@ function DrawStar () {
     stroke(basestrokec); // normal blue colour stroke for normal standardstroke
   }
 
-  fill(lightyellow); //light yellow original
+  fill(sixthlayerfill); //light yellow original
   strokeWeight (standardstroke + 1);
   
   //first.x, first.y, second.x, second.y, third.x, third.y
@@ -185,7 +191,7 @@ function DrawStar () {
 
 //Drawing front star layer - very centre front star diamond ontop of centre square
 
-  fill(lightyellow); //light yellow original
+  fill(frontlayerfill); //light yellow original
   strokeWeight(standardstroke - 0.5);
   stroke(basestrokec);
 
