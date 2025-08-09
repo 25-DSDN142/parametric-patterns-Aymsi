@@ -19,8 +19,7 @@ let squarewidth = 70
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
 let trianglelength = 50
 
-//custom stroke weight variables
-let thickerstroke = 4
+//custom stroke weight variable
 let standardstroke = 2
 
 function setup_wallpaper(pWallpaper) {
@@ -61,13 +60,11 @@ function DrawBackStarLayer () {
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(255, 218, 97); //vibrant yellow colour
 
-  if (thickerstroke > 1) {
-
+  if (standardstroke > 2) {
   stroke(0, 0, 0);
-
 }
 
-  strokeWeight(thickerstroke); //thicker back stroke w custom variable
+  strokeWeight(standardstroke + 2); //thicker back stroke w custom variable
   stroke(161, 209, 255); 
   //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
   beginShape();
