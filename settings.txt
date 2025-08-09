@@ -10,45 +10,43 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+
+//adding centre point variables to change my code - wanted a centre reference point
+//why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
+//plus also for implementing an if statement for adding multiple stars later
+let centrex = 100
+let centrey = 100
+
+//DrawBackStarLayer Variables
+let leftpoint = centrex - 20
+let rightpoint = centrex + 20
+let outsidestarpointlength = 20
+//Perameter change for this - connect to edge added to extend star points to edge of box
+let connecttoedge = 0
+
+//DrawSecondStarLayer + DrawFifthStarLayer Variables
+let squarewidth = 70
+
+//DrawFourthStarLayer + DrawSixthStarLayer Variables
+let trianglelength = 50
+
+//custom stroke weight variables + used for if statements
+let standardstroke = 2
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
+  
+  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  //note: can change offset to change how tiling displays to fill screen/area
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 /////////////////////////////////
 
 Wallpaper 2:
-
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
-
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
-
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
-}

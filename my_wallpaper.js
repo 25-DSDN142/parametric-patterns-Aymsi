@@ -19,11 +19,11 @@ let squarewidth = 70
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
 let trianglelength = 50
 
-//custom stroke weight variables
+//custom stroke weight variables + used for if statements
 let standardstroke = 2
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
   pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
@@ -33,15 +33,15 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   //note: can change offset to change how tiling displays to fill screen/area
-  pWallpaper.grid_settings.row_offset  = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
-  background(12, 39, 59); //want this to end up being dark navy - like a night sky?
+  background(3, 33, 54); //want this to end up being dark navy - like a night sky?
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
- 
+  
   DrawBackStarLayer();
   DrawSecondStarLayer();
   DrawThirdStarLayer();
@@ -71,13 +71,13 @@ function DrawBackStarLayer () {
   beginShape();
 
   vertex(leftpoint, centrey - 20);
-  vertex(centrex, outsidestarpointlength);
+  vertex(centrex, outsidestarpointlength - connecttoedge);
   vertex(rightpoint, centrey - 20);
-  vertex(200 - outsidestarpointlength, centrey);
+  vertex(200 - outsidestarpointlength + connecttoedge, centrey);
   vertex(rightpoint, centrey + 20);
-  vertex(centrex, 200 - outsidestarpointlength);
+  vertex(centrex, 200 - outsidestarpointlength + connecttoedge);
   vertex(leftpoint, centrey + 20);
-  vertex(outsidestarpointlength, centrey);
+  vertex(outsidestarpointlength - connecttoedge, centrey);
   
   endShape(CLOSE);
 
@@ -113,7 +113,7 @@ function DrawThirdStarLayer () {
 
 function DrawFourthStarLayer () {
 
-fill(255, 218, 97); //vibrant yellow
+fill(181, 227, 255); //light blue
 
   if ((standardstroke + 2) > 2) {
     stroke(255); // white stroke for thicker standard stroke + 2
@@ -167,7 +167,6 @@ function DrawSixthStarLayer () {
   triangle(centrex - 10, centrey + 10, centrex + 10, centrey + 10, centrex, centrey + trianglelength);
   //leftinsidetriangle
   triangle(centrex - 10, centrey - 10, centrex - 10, centrey + 10, centrex - trianglelength, centrey);
-
 
 }
 
