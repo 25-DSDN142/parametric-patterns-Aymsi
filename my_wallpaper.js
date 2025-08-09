@@ -3,7 +3,7 @@
 //adding centre point variables to change my code - wanted a centre reference point
 //why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
 //plus also for implementing an if statement for adding multiple stars later
-let centrex = 150
+let centrex = 100
 let centrey = 100
 
 //DrawBackStarLayer Variables
@@ -17,7 +17,7 @@ let connecttoedge = 20
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 50
+let trianglelength = 90
 
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
@@ -37,10 +37,11 @@ let standardstroke = 2
 //lightblue
 //let lightblue = color(181, 227, 255); 
 
+//trying a variable for scale (scale is hard I might scrap this)
 let scaleFactor = 1
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
   pWallpaper.resolution(FIT_TO_SCREEN); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
@@ -62,11 +63,11 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
   //trying to implement an if statement for scale function
-  if (centrex > 100) {
-    scaleFactor = 0.5;
-  } else {
-    scaleFactor = 1
-  }
+  //if (centrex > 100) {
+   // scaleFactor = 0.5;
+//  } else {
+//    scaleFactor = 1
+// }
 
   DrawBackStarLayer();
   DrawSecondStarLayer();
@@ -82,7 +83,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 //making each function based around the centrex = 100, and centrey = 100 function
 function DrawBackStarLayer () {
-  scale(scaleFactor);
+ scale(scaleFactor);
 
   let brightyellow = color(255, 218, 97);
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
