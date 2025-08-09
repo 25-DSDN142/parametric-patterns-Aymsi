@@ -55,7 +55,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  if (standardstroke > 2) {
   stroke(250); //TEST black stroke if thick
 } else {
+  if (standardstroke < 2) {
   stroke(161, 209, 255); //otherwise normal stroke colour
+}
 }
 
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
