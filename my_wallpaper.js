@@ -19,7 +19,7 @@ let squarewidth = 70
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
 let trianglelength = 50
 
-//custom stroke weight variable
+//custom stroke weight variables
 let standardstroke = 2
 
 function setup_wallpaper(pWallpaper) {
@@ -111,7 +111,7 @@ function DrawThirdStarLayer () {
 function DrawFourthStarLayer () {
 
   fill(255, 218, 97); //vibrant yellow
-  strokeWeight (thickerstroke);
+  strokeWeight (standardstroke + 2);
   //diagonal middle triangles
   //top right triangle
   //first.x, first.y, second.x, second.y, third.x, third.y
