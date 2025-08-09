@@ -41,6 +41,8 @@ function wallpaper_background() {
   background(12, 39, 59); //want this to end up being dark navy - like a night sky?
 }
 
+//161, 209, 255
+let colour = (161, 209, 255)
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
@@ -53,8 +55,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   DrawFrontStarLayer();
 }
 
- if (standardstroke < thickerstroke) {
-  stroke(161, 209, 255); //normal stroke colour
+ if (thickerstroke = 4) {
+  let colour = (0)
 } 
 
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
@@ -63,7 +65,7 @@ function DrawBackStarLayer () {
 
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(255, 218, 97); //vibrant yellow colour
-
+  stroke(colour);
   strokeWeight(thickerstroke); //thicker back stroke w custom variable
   //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
   beginShape();
