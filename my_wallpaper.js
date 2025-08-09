@@ -72,8 +72,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 //  } else {
 //    scaleFactor = 1
 // }
-
-  DrawBackStarLayer();
+  DrawStar();
   DrawSecondStarLayer();
   DrawThirdStarLayer();
   DrawFourthStarLayer();
@@ -86,13 +85,16 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
 //making each function based around the centrex = 100, and centrey = 100 function
-function DrawBackStarLayer () {
- scale(scaleFactor);
+function DrawStar () { //DrawBackStarLayer
+//scale(scaleFactor);
 
+//colour functions (need to be here so it runs properly)
   let basestrokec = color(199, 236, 255);
   let thickstrokec = color(255);
   let brightyellow = color(255, 218, 97);
-   //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
+
+//Drawing back star layer
+//drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(brightyellow); //bright yellow original
 
   if ((standardstroke + 2) > 2) {
