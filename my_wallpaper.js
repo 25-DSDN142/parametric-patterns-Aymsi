@@ -21,6 +21,7 @@ let trianglelength = 50
 
 //custom stroke weight variables
 let standardstroke = 2
+let thickerstroke = 4
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -53,11 +54,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 }
 
  if (standardstroke > 2) {
-  stroke(250); //TEST black stroke if thick
+  stroke(0); //TEST black stroke if thick
 } else {
-  if (standardstroke < 2) {
   stroke(161, 209, 255); //otherwise normal stroke colour
-}
 }
 
 //Seperated each layer of the star into its own function - for clarity of code and easier adjustment 
@@ -67,7 +66,7 @@ function DrawBackStarLayer () {
    //drawing shape with vertex points to form shape as if i was making the triangles based off of a square's points
   fill(255, 218, 97); //vibrant yellow colour
 
-  strokeWeight(standardstroke + 2); //thicker back stroke w custom variable
+  strokeWeight(thickerstroke); //thicker back stroke w custom variable
   //15, 45, 66 (option) //145, 193, 230 (option) //changing stroke colour to dark blue tones
   beginShape();
 
@@ -113,7 +112,7 @@ function DrawThirdStarLayer () {
 function DrawFourthStarLayer () {
 
   fill(255, 218, 97); //vibrant yellow
-  strokeWeight (standardstroke + 2);
+  strokeWeight (thickerstroke);
   //diagonal middle triangles
   //top right triangle
   //first.x, first.y, second.x, second.y, third.x, third.y
