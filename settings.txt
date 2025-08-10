@@ -53,12 +53,14 @@ let standardstroke = 2
 //let frontlayerfill = color(255, 244, 191); //light yellow
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
-//scaleFactor under DrawStar
+//scaleFactor under DrawStar Line: 80 - downwards
 
+Line: 83, 84
 //middlestarX = 100
 //middlestarY = 100
 
 //single DrawStar functions being put under the my_symbol function
+Line: 72
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -117,12 +119,14 @@ let standardstroke = 2
 //let frontlayerfill = color(255, 244, 191); //light yellow
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
-//scaleFactor under DrawStar
+//scaleFactor under DrawStar Line: 80 - downwards
 
+Line: 83, 84
 //middlestarX = 100
 //middlestarY = 100
 
 //single DrawStar functions being put under the my_symbol function
+Line: 72
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -170,11 +174,11 @@ let standardstroke = 2
 //each colour variable had to be put under each layer triangle function to work properly
 
 //background colour
-// let backgroundcolour = color(1, 35, 69);  //dark cool tone blue
+// let backgroundcolour = color(0);  //black
 
 //stroke colours Line: 105, 106
   // let basestrokec = color(255); //white
-  // let thickstrokec = color(99, 193, 255); //light blue
+  // let thickstrokec = color(250, 243, 182); //light yellow
 //fill colours Line: 107
 // let backlayerfill = color(214, 164, 26); //dark yellow/GOLD
 // let secondlayerfill = color(247, 222, 94); //lighter yellow
@@ -185,12 +189,14 @@ let standardstroke = 2
 // let frontlayerfill = color(255); //white
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
-//scaleFactor under DrawStar
+//scaleFactor under DrawStar Line: 80 - downwards
 
+Line: 83, 84
 //middlestarX = 100
 //middlestarY = 100
 
 //Multiple DrawStar functions being put under the my_symbol function
+// Line: 72
   DrawStar(100, 100);
   DrawStar(200, 200);
   DrawStar(0, 0);

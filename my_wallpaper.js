@@ -47,6 +47,7 @@ let standardstroke = 2
 //middlestarY = 100
 
 //Multiple DrawStar functions being put under the my_symbol function
+// Line: 72
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -63,7 +64,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  let backgroundcolour = color(1, 35, 69);  //dark cool tone blue
+  let backgroundcolour = color(0);  //black
   background(backgroundcolour); //want this to end up being dark navy - like a night sky?
 }
 
@@ -103,7 +104,7 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 //colour functions (need to be here so it runs properly)
 //stroke colours
   let basestrokec = color(255); //white
-  let thickstrokec = color(99, 193, 255); //light blue
+  let thickstrokec = color(250, 243, 182); //light yellow
 //fill colours
 let backlayerfill = color(214, 164, 26); //dark yellow/GOLD
 let secondlayerfill = color(247, 222, 94); //lighter yellow
