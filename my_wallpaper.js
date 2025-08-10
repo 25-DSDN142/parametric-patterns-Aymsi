@@ -26,20 +26,19 @@ let standardstroke = 2
 //each colour variable had to be put under each layer triangle function to work properly
 
 //background colour
-//let backgroundcolour = color(3, 33, 54); 
+// let backgroundcolour = color(1, 35, 69);  //dark cool tone blue
 
-//Stroke colours
-//let basestrokec = color(199, 236, 255); //base blue strokes
-//let thickstrokec = color(255); //white thick strokes
-
-//fill colours
-//let backlayerfill = color(255, 218, 97); //bright yellow
-//let secondlayerfill = color(255, 218, 97); //bright yellow
-//let thirdlayerfill = color(255, 244, 191); //light yellow
-//let fourthlayerfill = color(181, 227, 255); //light blue
-//let fifthlayerfill = color(255, 218, 97); //bright yellow
-//let sixthlayerfill = color(255, 244, 191); //light yellow
-//let frontlayerfill = color(255, 244, 191); //light yellow
+//stroke colours Line: 105, 106
+  // let basestrokec = color(255); //white
+  // let thickstrokec = color(99, 193, 255); //light blue
+//fill colours Line: 107
+// let backlayerfill = color(214, 164, 26); //dark yellow/GOLD
+// let secondlayerfill = color(247, 222, 94); //lighter yellow
+// let thirdlayerfill = color(255); //white
+// let fourthlayerfill = color(214, 164, 26); //dark yellow/GOLD
+// let fifthlayerfill = color(214, 164, 26); //dark yellow/GOLD
+// let sixthlayerfill = color(247, 222, 94); //lighter yellow
+// let frontlayerfill = color(255); //white
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
 //scaleFactor under DrawStar
@@ -103,8 +102,8 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
-  let basestrokec = color(255); //bright light blue
-  let thickstrokec = color(99, 193, 255); //near white light blue
+  let basestrokec = color(255); //white
+  let thickstrokec = color(99, 193, 255); //light blue
 //fill colours
 let backlayerfill = color(214, 164, 26); //dark yellow/GOLD
 let secondlayerfill = color(247, 222, 94); //lighter yellow
