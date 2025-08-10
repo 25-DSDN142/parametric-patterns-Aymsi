@@ -41,14 +41,13 @@ let standardstroke = 2
 //let sixthlayerfill = color(255, 244, 191); //light yellow
 //let frontlayerfill = color(255, 244, 191); //light yellow
 
-//trying a variable for scale (scale is hard I might scrap this)
-let scaleFactor = 1
+//scaleFactor under DrawStar
 
 //middlestarX = 100
 //middlestarY = 100
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
   pWallpaper.resolution(FIT_TO_SCREEN); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
@@ -71,13 +70,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 let middlestarX = 100
 let middlestarY = 100
 
-  //trying to implement an if statement for scale function
-  //if (centrex > 100) {
-   // scaleFactor = 0.5;
-//  } else {
-//    scaleFactor = 1
-// }
-  DrawStar(100, 100);
+  DrawStar(150, 150);
   DrawStar(50, 50);
 
 }
@@ -85,6 +78,10 @@ let middlestarY = 100
 //Creating my actual star in a function - so that I can draw/manipulate multiple stars under my_symbol function
 function DrawStar (middlestarX, middlestarY) { 
 //scale(scaleFactor);
+
+//trying a variable for scale (scale is hard I might scrap this)
+//let scaleFactor = starScaleFactor
+//let scaleFactor = 1
 
 //Setting local functions so they draw according to their own measurements
   let centrex = middlestarX;
@@ -95,6 +92,13 @@ function DrawStar (middlestarX, middlestarY) {
   let rightpoint = centrex + 20;
   let outsidestarpointlength = 20;
   let connecttoedge = 0;
+
+ //trying to implement an if statement for scale function
+  if (centrex > 100 || centrex < 100) {
+  let scaleFactor = 0.5;
+ } else {
+  let scaleFactor = 1
+}
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
