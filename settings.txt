@@ -402,3 +402,81 @@ function setup_wallpaper(pWallpaper) {
   //note: can change offset to change how tiling displays to fill screen/area
   pWallpaper.grid_settings.row_offset  = 100;
 }
+
+/////////////////////////////////
+
+Wallpaper 6:
+
+//your parameter variables go here!
+
+//adding centre point variables to change my code - wanted a centre reference point
+//why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
+//plus also for implementing an if statement for adding multiple stars later
+let centrex = 100
+let centrey = 100
+
+//DrawBackStarLayer Variables
+let leftpoint = centrex - 20
+let rightpoint = centrex + 20
+let outsidestarpointlength = 20
+//Perameter change for this - connect to edge added to extend star points to edge of box
+let connecttoedge = 10
+
+//DrawSecondStarLayer + DrawFifthStarLayer Variables
+let squarewidth = 70
+
+//DrawFourthStarLayer + DrawSixthStarLayer Variables
+let trianglelength = 50
+
+//custom stroke weight variables + used for if statements
+let standardstroke = 1
+
+//colour variables 
+//each colour variable had to be put under each layer triangle function to work properly
+
+//background colour Line: 76
+  // let backgroundcolour = color(14, 70, 92); //dark navy blue
+
+//stroke colours Line: 111
+  // let basestrokec = color(255, 223, 148); //brighter yellow
+  // let thickstrokec = color(255, 233, 181); //light yellow
+//fill colours Line: 115
+// let backlayerfill = color(255); //white
+// let secondlayerfill = color(21, 70, 110); //darker blue
+// let thirdlayerfill = color(128, 197, 255); //light blue
+// let fourthlayerfill = color(150, 220, 255); //light blue
+// let fifthlayerfill = color(14, 70, 92); //dark blue
+// let sixthlayerfill = color(222, 246, 255); //very light blue
+// let frontlayerfill = color(255); //white
+
+//Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
+//scaleFactor under DrawStar Line: 87 - downwards
+
+  // //Setting local functions so they draw according to their own measurements
+  // let centrex = middlestarX;
+  // let centrey = middlestarY;
+
+  // // variables for drawing shape reference
+  // let leftpoint = centrex - 20;
+  // let rightpoint = centrex + 20;
+  // let outsidestarpointlength = 20;
+  // let connecttoedge = 10;
+
+//Multiple DrawStar functions being put under the my_symbol function
+// Line: 82
+  // DrawStar(100, 150);
+  // DrawStar(100, 50);
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
+  
+  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  //note: can change offset to change how tiling displays to fill screen/area
+  pWallpaper.grid_settings.row_offset  = 0;
+}
