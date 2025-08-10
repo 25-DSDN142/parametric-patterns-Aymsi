@@ -67,27 +67,20 @@ function wallpaper_background() {
 
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-let middlestarX = 100
-let middlestarY = 100
 
-  DrawStar(150, 150);
-  DrawStar(50, 50);
+  DrawStar(150, 150, 0.5);
+  DrawStar(50, 50, 0.5);
 
 }
 
 //Creating my actual star in a function - so that I can draw/manipulate multiple stars under my_symbol function
-function DrawStar (middlestarX, middlestarY) { 
-//scale(scaleFactor);
+function DrawStar (middlestarX, middlestarY, scaleFactor = 1) { 
 
-//trying a variable for scale (scale is hard I might scrap this)
-//let scaleFactor = starScaleFactor
-//let scaleFactor = 1
-
-//Setting local functions so they draw according to their own measurements
+  //Setting local functions so they draw according to their own measurements
   let centrex = middlestarX;
   let centrey = middlestarY;
 
-  // variables for code ref
+  // variables for code ref (is this irrelevant????)
   let leftpoint = centrex - 20;
   let rightpoint = centrex + 20;
   let outsidestarpointlength = 20;
@@ -99,6 +92,15 @@ function DrawStar (middlestarX, middlestarY) {
  } else {
   let scaleFactor = 1
 }
+
+  push();
+  translate(middlestarX, middlestarY); //move start of star points to middlestarX + middlestarY
+  scale(scaleFactor); //scale from origin point 
+  translate(-100, -100); //so that star centre point is relative to scaling
+
+//trying a variable for scale (scale is hard I might scrap this)
+//let scaleFactor = starScaleFactor
+//let scaleFactor = 1
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
@@ -226,4 +228,5 @@ let frontlayerfill = color(255, 244, 191); //light yellow
 
   endShape(CLOSE);
 
+  pop();
 }
