@@ -55,9 +55,15 @@ let standardstroke = 2
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
 //scaleFactor under DrawStar Line: 80 - downwards
 
-Line: 83, 84
-//middlestarX = 100
-//middlestarY = 100
+  // //Setting local functions so they draw according to their own measurements
+  // let centrex = middlestarX;
+  // let centrey = middlestarY;
+
+  // // variables for drawing shape reference
+  // let leftpoint = centrex - 20;
+  // let rightpoint = centrex + 20;
+  // let outsidestarpointlength = 20;
+  // let connecttoedge = 70;
 
 //single DrawStar functions being put under the my_symbol function
 Line: 72
@@ -125,9 +131,15 @@ let standardstroke = 2
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
 //scaleFactor under DrawStar Line: 80 - downwards
 
-Line: 83, 84
-//middlestarX = 100
-//middlestarY = 100
+  // //Setting local functions so they draw according to their own measurements
+  // let centrex = middlestarX;
+  // let centrey = middlestarY;
+
+  // // variables for drawing shape reference
+  // let leftpoint = centrex - 20;
+  // let rightpoint = centrex + 20;
+  // let outsidestarpointlength = 20;
+  // let connecttoedge = 70;
 
 //single DrawStar functions being put under the my_symbol function
 // Line: 72
@@ -195,9 +207,15 @@ let standardstroke = 2
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
 //scaleFactor under DrawStar Line: 80 - downwards
 
-Line: 83, 84
-//middlestarX = 100
-//middlestarY = 100
+  // //Setting local functions so they draw according to their own measurements
+  // let centrex = middlestarX;
+  // let centrey = middlestarY;
+
+  // // variables for drawing shape reference
+  // let leftpoint = centrex - 20;
+  // let rightpoint = centrex + 20;
+  // let outsidestarpointlength = 20;
+  // let connecttoedge = 70;
 
 //Multiple DrawStar functions being put under the my_symbol function
 // Line: 72

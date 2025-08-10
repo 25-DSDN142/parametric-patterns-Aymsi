@@ -11,13 +11,13 @@ let leftpoint = centrex - 20
 let rightpoint = centrex + 20
 let outsidestarpointlength = 20
 //Perameter change for this - connect to edge added to extend star points to edge of box
-let connecttoedge = 20
+let connecttoedge = 80
 
 //DrawSecondStarLayer + DrawFifthStarLayer Variables
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 90
+let trianglelength = 115
 
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
@@ -41,10 +41,20 @@ let standardstroke = 2
 // let frontlayerfill = color(255); //white
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
-//scaleFactor under DrawStar
+//scaleFactor under DrawStar Line: 80 - downwards
 
-//middlestarX = 100
-//middlestarY = 100
+  // //Setting local functions so they draw according to their own measurements
+  // let centrex = middlestarX;
+  // let centrey = middlestarY;
+
+  // // variables for drawing shape reference
+  // let leftpoint = centrex - 20;
+  // let rightpoint = centrex + 20;
+  // let outsidestarpointlength = 20;
+  // let connecttoedge = 70;
+
+//Multiple DrawStar functions being put under the my_symbol function
+// Line: 72
 
 //single DrawStar functions being put under the my_symbol function
 // Line: 72
@@ -70,7 +80,10 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  DrawStar(100, 100);
+  DrawStar(50, 50);
+  DrawStar(150, 150);
+  DrawStar(150, 50);
+  DrawStar(50, 150);
 
 }
 
@@ -81,11 +94,11 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
   let centrex = middlestarX;
   let centrey = middlestarY;
 
-  // variables for code ref (is this irrelevant????)
+  // variables for drawing shape reference
   let leftpoint = centrex - 20;
   let rightpoint = centrex + 20;
   let outsidestarpointlength = 20;
-  let connecttoedge = 0;
+  let connecttoedge = 70;
 
  //trying to implement an if statement for scale function
   if (centrex > 100 || centrex < 100) {
