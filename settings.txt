@@ -114,7 +114,7 @@ let standardstroke = 2
 //colour variables 
 //each colour variable had to be put under each layer triangle function to work properly
 
-//background colour Line: 67
+//background colour Line: 73
 // let backgroundcolour = color(161, 224, 255);  // light blue
 
 //stroke colours Line: 105, 106
@@ -140,10 +140,11 @@ let standardstroke = 2
   // let leftpoint = centrex - 20;
   // let rightpoint = centrex + 20;
   // let outsidestarpointlength = 20;
-  // let connecttoedge = 70;
+  // let connecttoedge = 20;
 
 //single DrawStar functions being put under the my_symbol function
-// Line: 72
+// Line: 79
+//  DrawStar(100,100);
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
