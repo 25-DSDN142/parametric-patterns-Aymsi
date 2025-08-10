@@ -11,13 +11,13 @@ let leftpoint = centrex - 20
 let rightpoint = centrex + 20
 let outsidestarpointlength = 20
 //Perameter change for this - connect to edge added to extend star points to edge of box
-let connecttoedge = 20
+let connecttoedge = 0
 
 //DrawSecondStarLayer + DrawFifthStarLayer Variables
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 90
+let trianglelength = 55
 
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
@@ -25,19 +25,19 @@ let standardstroke = 2
 //colour variables 
 //each colour variable had to be put under each layer triangle function to work properly
 
-//background colour Line: 73
-// let backgroundcolour = color(161, 224, 255);  // light blue
+//background colour Line: 77
+// let backgroundcolour = color(0);  //black
 
 //stroke colours Line: 105, 106
-  // let basestrokec = color(255, 191, 222); //light pink
-  // let thickstrokec = color(250); //white
+  // let basestrokec = color(255); //white
+  // let thickstrokec = color(250, 243, 182); //light yellow
 //fill colours Line: 107
-// let backlayerfill = color(255, 191, 222); //light pink
-// let secondlayerfill = color(255, 79, 164); //bright pink
+// let backlayerfill = color(214, 164, 26); //dark yellow/GOLD
+// let secondlayerfill = color(247, 222, 94); //lighter yellow
 // let thirdlayerfill = color(255); //white
-// let fourthlayerfill = color(255, 79, 164); //bright pink
-// let fifthlayerfill = color(255, 79, 164); //bright pink
-// let sixthlayerfill = color(255, 191, 222); //light pink
+// let fourthlayerfill = color(214, 164, 26); //dark yellow/GOLD
+// let fifthlayerfill = color(214, 164, 26); //dark yellow/GOLD
+// let sixthlayerfill = color(247, 222, 94); //lighter yellow
 // let frontlayerfill = color(255); //white
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
@@ -51,11 +51,13 @@ let standardstroke = 2
   // let leftpoint = centrex - 20;
   // let rightpoint = centrex + 20;
   // let outsidestarpointlength = 20;
-  // let connecttoedge = 20;
+  // let connecttoedge = 0;
 
-//single DrawStar functions being put under the my_symbol function
-// Line: 79
-//  DrawStar(100,100);
+//Multiple DrawStar functions being put under the my_symbol function
+// Line: 82
+  // DrawStar(100, 100);
+  // DrawStar(200, 200);
+  // DrawStar(0, 0);
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -72,13 +74,15 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-let backgroundcolour = color(161, 224, 255);  // light blue
+let backgroundcolour = color(0);  //black
   background(backgroundcolour); 
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  DrawStar(100,100);
+ DrawStar(100, 100);
+  DrawStar(200, 200);
+  DrawStar(0, 0);
 }
 
 //Creating my actual star in a function - so that I can draw/manipulate multiple stars under my_symbol function
@@ -92,7 +96,7 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
   let leftpoint = centrex - 20;
   let rightpoint = centrex + 20;
   let outsidestarpointlength = 20;
-  let connecttoedge = 20;
+  let connecttoedge = 0;
 
  //trying to implement an if statement for scale function
   if (centrex > 100 || centrex < 100) {
@@ -108,15 +112,15 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
-  let basestrokec = color(255, 191, 222); //light pink
-  let thickstrokec = color(250); //white
+  let basestrokec = color(255); //white
+  let thickstrokec = color(250, 243, 182); //light yellow
 //fill colours
-let backlayerfill = color(255, 191, 222); //light pink
-let secondlayerfill = color(255, 79, 164); //bright pink
+let backlayerfill = color(214, 164, 26); //dark yellow/GOLD
+let secondlayerfill = color(247, 222, 94); //lighter yellow
 let thirdlayerfill = color(255); //white
-let fourthlayerfill = color(255, 79, 164); //bright pink
-let fifthlayerfill = color(255, 79, 164); //bright pink
-let sixthlayerfill = color(255, 191, 222); //light pink
+let fourthlayerfill = color(214, 164, 26); //dark yellow/GOLD
+let fifthlayerfill = color(214, 164, 26); //dark yellow/GOLD
+let sixthlayerfill = color(247, 222, 94); //lighter yellow
 let frontlayerfill = color(255); //white
 
 //if function for stroke to turn white if its thicker 

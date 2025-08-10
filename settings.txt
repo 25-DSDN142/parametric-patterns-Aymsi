@@ -191,13 +191,13 @@ let standardstroke = 2
 //colour variables 
 //each colour variable had to be put under each layer triangle function to work properly
 
-//background colour Line: 67
+//background colour Line: 77
 // let backgroundcolour = color(0);  //black
 
-//stroke colours Line: 105, 106
+//stroke colours Line: 115
   // let basestrokec = color(255); //white
   // let thickstrokec = color(250, 243, 182); //light yellow
-//fill colours Line: 107
+//fill colours Line: 118
 // let backlayerfill = color(214, 164, 26); //dark yellow/GOLD
 // let secondlayerfill = color(247, 222, 94); //lighter yellow
 // let thirdlayerfill = color(255); //white
@@ -217,10 +217,10 @@ let standardstroke = 2
   // let leftpoint = centrex - 20;
   // let rightpoint = centrex + 20;
   // let outsidestarpointlength = 20;
-  // let connecttoedge = 70;
+  // let connecttoedge = 0;
 
 //Multiple DrawStar functions being put under the my_symbol function
-// Line: 72
+// Line: 82
   DrawStar(100, 100);
   DrawStar(200, 200);
   DrawStar(0, 0);
