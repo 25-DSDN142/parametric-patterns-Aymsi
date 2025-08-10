@@ -17,7 +17,7 @@ let connecttoedge = 80
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 115
+let trianglelength = 100
 
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
@@ -26,18 +26,18 @@ let standardstroke = 2
 //each colour variable had to be put under each layer triangle function to work properly
 
 //background colour Line: 67
-// let backgroundcolour = color(161, 224, 255);  // light blue
+  // let backgroundcolour = color(28, 0, 51); //dark black toned purple
 
 //stroke colours Line: 105, 106
-  // let basestrokec = color(255, 191, 222); //light pink
-  // let thickstrokec = color(250); //white
+  // let basestrokec = color(135, 120, 255); //blue toned purple
+  // let thickstrokec = color(255); //white 
 //fill colours Line: 107
-// let backlayerfill = color(255, 191, 222); //light pink
-// let secondlayerfill = color(255, 79, 164); //bright pink
+// let backlayerfill = color(255); //white
+// let secondlayerfill = color(0); //black 
 // let thirdlayerfill = color(255); //white
-// let fourthlayerfill = color(255, 79, 164); //bright pink
-// let fifthlayerfill = color(255, 79, 164); //bright pink
-// let sixthlayerfill = color(255, 191, 222); //light pink
+// let fourthlayerfill = color(135, 120, 255); //blue toned purple
+// let fifthlayerfill = color(0); //bright pink
+// let sixthlayerfill = color(226, 191, 255); //lighter pink toned purple
 // let frontlayerfill = color(255); //white
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
@@ -54,16 +54,17 @@ let standardstroke = 2
   // let connecttoedge = 70;
 
 //Multiple DrawStar functions being put under the my_symbol function
-// Line: 72
-
-//single DrawStar functions being put under the my_symbol function
-// Line: 72
+// Line: 80
+  // DrawStar(50, 50);
+  // DrawStar(150, 150);
+  // DrawStar(150, 50);
+  // DrawStar(50, 150);
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
-  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
+  pWallpaper.resolution(NINE_LANDSCAPE); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -74,7 +75,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  let backgroundcolour = color(161, 224, 255);  // light blue
+  let backgroundcolour = color(28, 0, 51); //dark black toned purple
   background(backgroundcolour); 
 }
 
@@ -114,15 +115,15 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
-  let basestrokec = color(255, 191, 222); //light pink
-  let thickstrokec = color(250); //white
+  let basestrokec = color(135, 120, 255); //blue toned purple
+  let thickstrokec = color(255); //white 
 //fill colours
-let backlayerfill = color(255, 191, 222); //light pink
-let secondlayerfill = color(255, 79, 164); //bright pink
+let backlayerfill = color(255); //white
+let secondlayerfill = color(0); //black 
 let thirdlayerfill = color(255); //white
-let fourthlayerfill = color(255, 79, 164); //bright pink
-let fifthlayerfill = color(255, 79, 164); //bright pink
-let sixthlayerfill = color(255, 191, 222); //light pink
+let fourthlayerfill = color(135, 120, 255); //blue toned purple
+let fifthlayerfill = color(0); //bright pink
+let sixthlayerfill = color(226, 191, 255); //lighter pink toned purple
 let frontlayerfill = color(255); //white
 
 //if function for stroke to turn white if its thicker 
