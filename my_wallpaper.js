@@ -68,8 +68,8 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  DrawStar(150, 150, 0.5);
-  DrawStar(50, 50, 0.5);
+  DrawStar(150, 150);
+  DrawStar(50, 50);
 
 }
 
@@ -88,9 +88,9 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
  //trying to implement an if statement for scale function
   if (centrex > 100 || centrex < 100) {
-  let scaleFactor = 0.5;
+  scaleFactor = 0.5;
  } else {
-  let scaleFactor = 1
+  scaleFactor = 1
 }
 
   push();
