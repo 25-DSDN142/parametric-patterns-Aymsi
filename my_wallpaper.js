@@ -17,31 +17,32 @@ let connecttoedge = 0
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 100
+let trianglelength = 50
 
 //custom stroke weight variables + used for if statements
-let standardstroke = 4
+let standardstroke = 2
 
 //colour variables 
 //each colour variable had to be put under each layer triangle function to work properly
 
-//background colour Line: 82
-// let backgroundcolour = color(218, 242, 220); //super light green
+//background colour Line: 67
+//let backgroundcolour = color(3, 33, 54); 
 
-//stroke colours Line: 125
-  // let basestrokec = color(37, 69, 32); //dark green
-  // let thickstrokec = color(25, 43, 22); //darker green
-//fill colours Line: 128
-// let backlayerfill = color(145, 186, 138); //light sage green
-// let secondlayerfill = color(145, 186, 138); //light sage green
-// let thirdlayerfill = color(145, 186, 138); //light sage green
-// let fourthlayerfill = color(105, 4, 38); //deep red
-// let fifthlayerfill = color(255); //white
-// let sixthlayerfill = color(201, 20, 84); //bright pink/red
-// let frontlayerfill = color(255, 193, 94); //yellow
+//Stroke colours Line: 105, 106
+//let basestrokec = color(199, 236, 255); //base blue strokes
+//let thickstrokec = color(255); //white thick strokes
+
+//fill colours Line: 107
+//let backlayerfill = color(255, 218, 97); //bright yellow
+//let secondlayerfill = color(255, 218, 97); //bright yellow
+//let thirdlayerfill = color(255, 244, 191); //light yellow
+//let fourthlayerfill = color(181, 227, 255); //light blue
+//let fifthlayerfill = color(255, 218, 97); //bright yellow
+//let sixthlayerfill = color(255, 244, 191); //light yellow
+//let frontlayerfill = color(255, 244, 191); //light yellow
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
-//scaleFactor under DrawStar Line: 102 - downwards
+//scaleFactor under DrawStar Line: 80 - downwards
 
   // //Setting local functions so they draw according to their own measurements
   // let centrex = middlestarX;
@@ -51,24 +52,17 @@ let standardstroke = 4
   // let leftpoint = centrex - 20;
   // let rightpoint = centrex + 20;
   // let outsidestarpointlength = 20;
-  // let connecttoedge = 0;
+  // let connecttoedge = 70;
 
-//Multiple DrawStar functions being put under the my_symbol function
-// Line: 88
-//  //top left star
-//   DrawStar(0, 0);
-//   //top right star
-//   DrawStar(200, 0);
-//   //bottom right star
-//   DrawStar(200, 200);
-//   //bottom left star
-//   DrawStar(0, 200);
+//single DrawStar functions being put under the my_symbol function
+//Line: 79
+//  DrawStar(100,100);
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
-  pWallpaper.resolution(NINE_LANDSCAPE); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
+  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -79,21 +73,13 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  let backgroundcolour = color(218, 242, 220); //super light green
+let backgroundcolour = color(3, 33, 54); 
   background(backgroundcolour); 
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  //top left star
-  DrawStar(0, 0);
-  //top right star
-  DrawStar(200, 0);
-  //bottom right star
-  DrawStar(200, 200);
-  //bottom left star
-  DrawStar(0, 200);
-
+  DrawStar(100,100);
 }
 
 //Creating my actual star in a function - so that I can draw/manipulate multiple stars under my_symbol function
@@ -123,16 +109,16 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
-  let basestrokec = color(37, 69, 32); //dark green
-  let thickstrokec = color(25, 43, 22); //darker green
+let basestrokec = color(199, 236, 255); //base blue strokes
+let thickstrokec = color(255); //white thick strokes
 //fill colours
-let backlayerfill = color(145, 186, 138); //light sage green
-let secondlayerfill = color(145, 186, 138); //light sage green
-let thirdlayerfill = color(145, 186, 138); //light sage green
-let fourthlayerfill = color(105, 4, 38); //deep red
-let fifthlayerfill = color(255); //white
-let sixthlayerfill = color(201, 20, 84); //bright pink/red
-let frontlayerfill = color(255, 193, 94); //yellow
+let backlayerfill = color(255, 218, 97); //bright yellow
+let secondlayerfill = color(255, 218, 97); //bright yellow
+let thirdlayerfill = color(255, 244, 191); //light yellow
+let fourthlayerfill = color(181, 227, 255); //light blue
+let fifthlayerfill = color(255, 218, 97); //bright yellow
+let sixthlayerfill = color(255, 244, 191); //light yellow
+let frontlayerfill = color(255, 244, 191); //light yellow
 
 //if function for stroke to turn white if its thicker 
   if ((standardstroke + 2) > 2) {
