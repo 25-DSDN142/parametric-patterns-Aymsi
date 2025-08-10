@@ -26,19 +26,19 @@ let standardstroke = 2
 //each colour variable had to be put under each layer triangle function to work properly
 
 //background colour Line: 84
-  // let backgroundcolour = color(14, 70, 92); //dark navy blue
+  // let backgroundcolour = color(0); //black
 
 //stroke colours Line: 128
-  // let basestrokec = color(255, 223, 148); //brighter yellow
-  // let thickstrokec = color(255, 233, 181); //light yellow
+  // let basestrokec = color(255, 212, 240); //light pink
+  // let thickstrokec = color(214, 255, 220); //light green
 //fill colours Line: 132
-// let backlayerfill = color(255); //white
-// let secondlayerfill = color(21, 70, 110); //darker blue
-// let thirdlayerfill = color(128, 197, 255); //light blue
-// let fourthlayerfill = color(150, 220, 255); //light blue
-// let fifthlayerfill = color(14, 70, 92); //dark blue
-// let sixthlayerfill = color(222, 246, 255); //very light blue
-// let frontlayerfill = color(255); //white
+// let backlayerfill = color(115, 156, 121); //light green
+// let secondlayerfill = color(255, 128, 195); //vibrant pink
+// let thirdlayerfill = color(227, 34, 136); //darker vibrant pink
+// let fourthlayerfill = color(110, 3, 60); //deep dark pink
+// let fifthlayerfill = color(110, 3, 60); //deep dark pink
+// let sixthlayerfill = color(227, 34, 136); //darker vibrant pink
+// let frontlayerfill = color(255, 128, 195); //vibrant pink
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
 //scaleFactor under DrawStar Line: 104 - downwards
