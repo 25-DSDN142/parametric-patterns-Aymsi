@@ -17,7 +17,7 @@ let connecttoedge = 0
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 50
+let trianglelength = 55
 
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
@@ -41,35 +41,38 @@ let standardstroke = 2
 //let sixthlayerfill = color(255, 244, 191); //light yellow
 //let frontlayerfill = color(255, 244, 191); //light yellow
 
+//Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
 //scaleFactor under DrawStar
 
 //middlestarX = 100
 //middlestarY = 100
 
+//Multiple DrawStar functions being put under the my_symbol function
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
-  pWallpaper.resolution(FIT_TO_SCREEN); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
+  pWallpaper.resolution(NINE_LANDSCAPE); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   //note: can change offset to change how tiling displays to fill screen/area
-  pWallpaper.grid_settings.row_offset  = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
-  let backgroundcolour = color(3, 33, 54);
+  let backgroundcolour = color(1, 35, 69);  //dark cool tone blue
   background(backgroundcolour); //want this to end up being dark navy - like a night sky?
 }
 
-
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  DrawStar(150, 150);
-  DrawStar(50, 50);
+  DrawStar(100, 100);
+  DrawStar(200, 200);
+  DrawStar(0, 0);
 
 }
 
@@ -88,7 +91,7 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
  //trying to implement an if statement for scale function
   if (centrex > 100 || centrex < 100) {
-  scaleFactor = 0.5;
+  scaleFactor = 0.35;
  } else {
   scaleFactor = 1
 }
@@ -98,22 +101,18 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
   scale(scaleFactor); //scale from origin point 
   translate(-100, -100); //so that star centre point is relative to scaling
 
-//trying a variable for scale (scale is hard I might scrap this)
-//let scaleFactor = starScaleFactor
-//let scaleFactor = 1
-
 //colour functions (need to be here so it runs properly)
 //stroke colours
-  let basestrokec = color(199, 236, 255);
-  let thickstrokec = color(255);
+  let basestrokec = color(255); //bright light blue
+  let thickstrokec = color(99, 193, 255); //near white light blue
 //fill colours
-let backlayerfill = color(255, 218, 97); //bright yellow
-let secondlayerfill = color(255, 218, 97); //bright yellow
-let thirdlayerfill = color(255, 244, 191); //light yellow
-let fourthlayerfill = color(181, 227, 255); //light blue
-let fifthlayerfill = color(255, 218, 97); //bright yellow
-let sixthlayerfill = color(255, 244, 191); //light yellow
-let frontlayerfill = color(255, 244, 191); //light yellow
+let backlayerfill = color(214, 164, 26); //dark yellow/GOLD
+let secondlayerfill = color(247, 222, 94); //lighter yellow
+let thirdlayerfill = color(255); //white
+let fourthlayerfill = color(214, 164, 26); //dark yellow/GOLD
+let fifthlayerfill = color(214, 164, 26); //dark yellow/GOLD
+let sixthlayerfill = color(247, 222, 94); //lighter yellow
+let frontlayerfill = color(255); //white
 
 //if function for stroke to turn white if its thicker 
   if ((standardstroke + 2) > 2) {
@@ -151,7 +150,7 @@ let frontlayerfill = color(255, 244, 191); //light yellow
 
   fill(thirdlayerfill); //lightest yellow original
   strokeWeight (standardstroke);
-  stroke(199, 236, 255);
+  stroke(basestrokec);
 
   beginShape();
   //adding each point of the diamond
