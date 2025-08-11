@@ -26,18 +26,18 @@ let standardstroke = 2
 //each colour variable had to be put under each layer triangle function to work properly
 
 //background colour Line: 78
-  // let backgroundcolour = color(0, 37, 66); //dark navy blue 
+  // let backgroundcolour = color(255, 214, 234); //light pink 
 
 //stroke colours Line: 117
-  // let basestrokec = color(255, 233, 171); //light yellow
+  // let basestrokec = color(0, 43, 77); //dark blue
   // let thickstrokec = color(255); //white
 //fill colours Line: 120
-// let backlayerfill = color(255, 199, 59); //vibrant yellow
-// let secondlayerfill = color(255, 170, 51); //orange
+// let backlayerfill = color(0, 43, 77); //dark blue
+// let secondlayerfill = color(48, 123, 179); //blue
 // let thirdlayerfill = color(225); //white
-// let fourthlayerfill = color(255, 238, 150); //light yellow
-// let fifthlayerfill = color(255, 199, 59); //vibrant yellow
-// let sixthlayerfill = color(255, 249, 207); //very light yellow
+// let fourthlayerfill = color(161, 216, 255); //light blue
+// let fifthlayerfill = color(0, 43, 77); //dark blue
+// let sixthlayerfill = color(48, 123, 179); //blue
 // let frontlayerfill = color(255); //white
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
@@ -57,7 +57,7 @@ let standardstroke = 2
 // Line: 82
 // DrawStar(100, 50);
 // DrawStar(100, 150);
-// DrawStar(25, 100);
+// DrawStar(27, 100);
 // DrawStar(175, 100);
 
 function setup_wallpaper(pWallpaper) {
