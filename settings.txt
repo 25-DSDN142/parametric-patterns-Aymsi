@@ -1,10 +1,6 @@
 You will need to fill out this file for hand in. 
 
-The bellow is just an example, feel free to disregard this documents contents.
-
-
-Your final settings.txt will look something like this when you are finished:
-
+All wallpaper variables + details on how many stars were drawn with the DrawStar function under my_symbol
 /////////////////////////////////
 
 Wallpaper 1:
@@ -162,7 +158,7 @@ function setup_wallpaper(pWallpaper) {
 
 /////////////////////////////////
 
-Wallpaper 3:
+Wallpaper 3 - FAVOURITE WALLPAPER!:
 
 //your parameter variables go here!
 
