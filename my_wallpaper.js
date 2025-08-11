@@ -1,4 +1,5 @@
 //your parameter variables go here!
+//Current variables + DrawStar functions under my_symbol in this code are for my favourite wallpaper - wallpaper 3.
 
 //adding centre point variables to change my code - wanted a centre reference point
 //why? Clarity of reading code, easier editing later for perameterising code for different wallpaper layouts,
