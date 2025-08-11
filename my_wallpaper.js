@@ -9,15 +9,15 @@ let centrey = 100
 //DrawBackStarLayer Variables
   let leftpoint = centrex - 20;
   let rightpoint = centrex + 20;
-  let outsidestarpointlength = 18;
+  let outsidestarpointlength = 50;
 //Perameter change for this - connect to edge added to extend star points to edge of box
- let connecttoedge = 75;
+ let connecttoedge = 0;
 
 //DrawSecondStarLayer + DrawFifthStarLayer Variables
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 65
+let trianglelength = 70
 
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
@@ -50,15 +50,15 @@ let standardstroke = 2
   // variables for drawing shape reference
   // let leftpoint = centrex - 20;
   // let rightpoint = centrex + 20;
-  // let outsidestarpointlength = 18;
-  // let connecttoedge = 75;
+  // let outsidestarpointlength = 50;
+  // let connecttoedge = 0;
 
 //Multiple DrawStar functions being put under the my_symbol function
 // Line: 82
-  // DrawStar(50, 50);
-  // DrawStar(75, 75);
-  // DrawStar(150, 150);
-  // DrawStar(125, 125);
+// DrawStar(100, 50);
+// DrawStar(100, 150);
+// DrawStar(25, 100);
+// DrawStar(175, 100);
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -71,20 +71,20 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   //note: can change offset to change how tiling displays to fill screen/area
-  pWallpaper.grid_settings.row_offset  = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
-  let backgroundcolour = color(0, 37, 66); //dark navy blue 
+  let backgroundcolour = color(255, 214, 234); //light pink 
   background(backgroundcolour); 
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  DrawStar(50, 50);
-  DrawStar(75, 75);
-  DrawStar(150, 150);
-  DrawStar(125, 125);
+DrawStar(100, 50);
+DrawStar(100, 150);
+DrawStar(27, 100);
+DrawStar(175, 100);
 
 }
 
@@ -98,8 +98,8 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
   // variables for drawing shape reference
   let leftpoint = centrex - 20;
   let rightpoint = centrex + 20;
-  let outsidestarpointlength = 18;
-  let connecttoedge = 75;
+  let outsidestarpointlength = 50;
+  let connecttoedge = 0;
 
  //trying to implement an if statement for scale function
   if (centrex > 100 || centrex < 100) {
@@ -115,15 +115,15 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
-  let basestrokec = color(255, 233, 171); //light yellow
+  let basestrokec = color(0, 43, 77); //dark blue
   let thickstrokec = color(255); //white
 //fill colours
-let backlayerfill = color(255, 199, 59); //vibrant yellow
-let secondlayerfill = color(255, 170, 51); //orange
+let backlayerfill = color(0, 43, 77); //dark blue
+let secondlayerfill = color(48, 123, 179); //blue
 let thirdlayerfill = color(225); //white
-let fourthlayerfill = color(255, 238, 150); //light yellow
-let fifthlayerfill = color(255, 199, 59); //vibrant yellow
-let sixthlayerfill = color(255, 249, 207); //very light yellow
+let fourthlayerfill = color(161, 216, 255); //light blue
+let fifthlayerfill = color(0, 43, 77); //dark blue
+let sixthlayerfill = color(48, 123, 179); //blue
 let frontlayerfill = color(255); //white
 
 //if function for stroke to turn white if its thicker 
