@@ -7,17 +7,17 @@ let centrex = 100
 let centrey = 100
 
 //DrawBackStarLayer Variables
-let leftpoint = centrex - 35
-let rightpoint = centrex + 35
-let outsidestarpointlength = 30
+  let leftpoint = centrex - 20;
+  let rightpoint = centrex + 20;
+  let outsidestarpointlength = 18;
 //Perameter change for this - connect to edge added to extend star points to edge of box
-let connecttoedge = 30
+ let connecttoedge = 75;
 
 //DrawSecondStarLayer + DrawFifthStarLayer Variables
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 35
+let trianglelength = 65
 
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
@@ -25,78 +25,66 @@ let standardstroke = 2
 //colour variables 
 //each colour variable had to be put under each layer triangle function to work properly
 
-//background colour Line: 84
-  // let backgroundcolour = color(0); //black
+//background colour Line: 78
+  // let backgroundcolour = color(0, 37, 66); //dark navy blue 
 
-//stroke colours Line: 128
-  // let basestrokec = color(255, 212, 240); //light pink
-  // let thickstrokec = color(214, 255, 220); //light green
-//fill colours Line: 132
-// let backlayerfill = color(115, 156, 121); //light green
-// let secondlayerfill = color(255, 128, 195); //vibrant pink
-// let thirdlayerfill = color(227, 34, 136); //darker vibrant pink
-// let fourthlayerfill = color(110, 3, 60); //deep dark pink
-// let fifthlayerfill = color(110, 3, 60); //deep dark pink
-// let sixthlayerfill = color(227, 34, 136); //darker vibrant pink
-// let frontlayerfill = color(255, 128, 195); //vibrant pink
+//stroke colours Line: 117
+  // let basestrokec = color(255, 233, 171); //light yellow
+  // let thickstrokec = color(255); //white
+//fill colours Line: 120
+// let backlayerfill = color(255, 199, 59); //vibrant yellow
+// let secondlayerfill = color(255, 170, 51); //orange
+// let thirdlayerfill = color(225); //white
+// let fourthlayerfill = color(255, 238, 150); //light yellow
+// let fifthlayerfill = color(255, 199, 59); //vibrant yellow
+// let sixthlayerfill = color(255, 249, 207); //very light yellow
+// let frontlayerfill = color(255); //white
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
-//scaleFactor under DrawStar Line: 104 - downwards
+//scaleFactor under DrawStar Line: 92 - downwards
 
   // //Setting local functions so they draw according to their own measurements 
   // let centrex = middlestarX;
   // let centrey = middlestarY;
 
   // variables for drawing shape reference
-  // let leftpoint = centrex - 35;
-  // let rightpoint = centrex + 35;
-  // let outsidestarpointlength = 30;
-  // let connecttoedge = 30;
+  // let leftpoint = centrex - 20;
+  // let rightpoint = centrex + 20;
+  // let outsidestarpointlength = 18;
+  // let connecttoedge = 75;
 
 //Multiple DrawStar functions being put under the my_symbol function
-// Line: 90
-  // //middle star
-  // DrawStar(100, 100);
-  // //top right star
-  // DrawStar(150, 50);
-  // //bottom right star
-  // DrawStar(150, 150);
-  // //bottom left star
-  // DrawStar(50, 150);
-  // //top left star
+// Line: 82
   // DrawStar(50, 50);
+  // DrawStar(75, 75);
+  // DrawStar(150, 150);
+  // DrawStar(125, 125);
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
-  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
+  pWallpaper.resolution(NINE_LANDSCAPE); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   //note: can change offset to change how tiling displays to fill screen/area
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 function wallpaper_background() {
-  let backgroundcolour = color(0); //black
+  let backgroundcolour = color(0, 37, 66); //dark navy blue 
   background(backgroundcolour); 
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  //middle star
-  DrawStar(100, 100);
-  //top right star
-  DrawStar(150, 50);
-  //bottom right star
-  DrawStar(150, 150);
-  //bottom left star
-  DrawStar(50, 150);
-  //top left star
   DrawStar(50, 50);
+  DrawStar(75, 75);
+  DrawStar(150, 150);
+  DrawStar(125, 125);
 
 }
 
@@ -108,10 +96,10 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
   let centrey = middlestarY;
 
   // variables for drawing shape reference
-  let leftpoint = centrex - 35;
-  let rightpoint = centrex + 35;
-  let outsidestarpointlength = 30;
-  let connecttoedge = 30;
+  let leftpoint = centrex - 20;
+  let rightpoint = centrex + 20;
+  let outsidestarpointlength = 18;
+  let connecttoedge = 75;
 
  //trying to implement an if statement for scale function
   if (centrex > 100 || centrex < 100) {
@@ -127,16 +115,16 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
-  let basestrokec = color(255, 212, 240); //light pink
-  let thickstrokec = color(214, 255, 220); //light green
+  let basestrokec = color(255, 233, 171); //light yellow
+  let thickstrokec = color(255); //white
 //fill colours
-let backlayerfill = color(115, 156, 121); //light green
-let secondlayerfill = color(255, 128, 195); //vibrant pink
-let thirdlayerfill = color(227, 34, 136); //darker vibrant pink
-let fourthlayerfill = color(110, 3, 60); //deep dark pink
-let fifthlayerfill = color(110, 3, 60); //deep dark pink
-let sixthlayerfill = color(227, 34, 136); //darker vibrant pink
-let frontlayerfill = color(255, 128, 195); //vibrant pink
+let backlayerfill = color(255, 199, 59); //vibrant yellow
+let secondlayerfill = color(255, 170, 51); //orange
+let thirdlayerfill = color(225); //white
+let fourthlayerfill = color(255, 238, 150); //light yellow
+let fifthlayerfill = color(255, 199, 59); //vibrant yellow
+let sixthlayerfill = color(255, 249, 207); //very light yellow
+let frontlayerfill = color(255); //white
 
 //if function for stroke to turn white if its thicker 
   if ((standardstroke + 2) > 2) {
