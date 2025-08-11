@@ -114,13 +114,13 @@ let standardstroke = 2
 //colour variables 
 //each colour variable had to be put under each layer triangle function to work properly
 
-//background colour Line: 73
-// let backgroundcolour = color(161, 224, 255);  // light blue
+//background colour Line: 75
+// let backgroundcolour = color(125, 2, 64); //deep darker pink
 
-//stroke colours Line: 105, 106
+//stroke colours Line: 111
   // let basestrokec = color(255, 191, 222); //light pink
   // let thickstrokec = color(250); //white
-//fill colours Line: 107
+//fill colours Line: 114
 // let backlayerfill = color(255, 191, 222); //light pink
 // let secondlayerfill = color(255, 79, 164); //bright pink
 // let thirdlayerfill = color(255); //white
@@ -150,7 +150,7 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
-  pWallpaper.resolution(NINE_LANDSCAPE); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
+  pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings

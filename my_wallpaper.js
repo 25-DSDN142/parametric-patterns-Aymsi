@@ -7,17 +7,17 @@ let centrex = 100
 let centrey = 100
 
 //DrawBackStarLayer Variables
-  let leftpoint = centrex - 20;
-  let rightpoint = centrex + 20;
-  let outsidestarpointlength = 50;
+let leftpoint = centrex - 20
+let rightpoint = centrex + 20
+let outsidestarpointlength = 20
 //Perameter change for this - connect to edge added to extend star points to edge of box
- let connecttoedge = 0;
+let connecttoedge = 20
 
 //DrawSecondStarLayer + DrawFifthStarLayer Variables
 let squarewidth = 70
 
 //DrawFourthStarLayer + DrawSixthStarLayer Variables
-let trianglelength = 70
+let trianglelength = 90
 
 //custom stroke weight variables + used for if statements
 let standardstroke = 2
@@ -25,43 +25,40 @@ let standardstroke = 2
 //colour variables 
 //each colour variable had to be put under each layer triangle function to work properly
 
-//background colour Line: 78
-  // let backgroundcolour = color(255, 214, 234); //light pink 
+//background colour Line: 75
+// let backgroundcolour = color(125, 2, 64); //deep darker pink
 
-//stroke colours Line: 117
-  // let basestrokec = color(0, 43, 77); //dark blue
-  // let thickstrokec = color(255); //white
-//fill colours Line: 120
-// let backlayerfill = color(0, 43, 77); //dark blue
-// let secondlayerfill = color(48, 123, 179); //blue
-// let thirdlayerfill = color(225); //white
-// let fourthlayerfill = color(161, 216, 255); //light blue
-// let fifthlayerfill = color(0, 43, 77); //dark blue
-// let sixthlayerfill = color(48, 123, 179); //blue
+//stroke colours Line: 111
+  // let basestrokec = color(255, 191, 222); //light pink
+  // let thickstrokec = color(250); //white
+//fill colours Line: 114
+// let backlayerfill = color(255, 191, 222); //light pink
+// let secondlayerfill = color(255, 79, 164); //bright pink
+// let thirdlayerfill = color(255); //white
+// let fourthlayerfill = color(255, 79, 164); //bright pink
+// let fifthlayerfill = color(255, 79, 164); //bright pink
+// let sixthlayerfill = color(255, 191, 222); //light pink
 // let frontlayerfill = color(255); //white
 
 //Functions specifically under DrawStar (so that they work - parameters passing through DrawStar function)
-//scaleFactor under DrawStar Line: 92 - downwards
+//scaleFactor under DrawStar Line: 80 - downwards
 
-  // //Setting local functions so they draw according to their own measurements 
+  // //Setting local functions so they draw according to their own measurements
   // let centrex = middlestarX;
   // let centrey = middlestarY;
 
-  // variables for drawing shape reference
+  // // variables for drawing shape reference
   // let leftpoint = centrex - 20;
   // let rightpoint = centrex + 20;
-  // let outsidestarpointlength = 50;
-  // let connecttoedge = 0;
+  // let outsidestarpointlength = 20;
+  // let connecttoedge = 20;
 
-//Multiple DrawStar functions being put under the my_symbol function
-// Line: 82
-// DrawStar(100, 50);
-// DrawStar(100, 150);
-// DrawStar(27, 100);
-// DrawStar(175, 100);
+//single DrawStar functions being put under the my_symbol function
+// Line: 79
+//  DrawStar(100,100);
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GRID_WALLPAPER) - change back to DEVELOP_GLYPH to edit just design
   
   pWallpaper.resolution(NINE_PORTRAIT); //FIT_TO_SCREEN //NINE_PORTRAIT makes it portrait repeated 9x //can also do NINE_LANDSCAPE
@@ -75,16 +72,13 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  let backgroundcolour = color(255, 214, 234); //light pink 
+  let backgroundcolour = color(125, 2, 64); //deep darker pink
   background(backgroundcolour); 
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-DrawStar(100, 50);
-DrawStar(100, 150);
-DrawStar(27, 100);
-DrawStar(175, 100);
+DrawStar(100,100);
 
 }
 
@@ -98,8 +92,8 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
   // variables for drawing shape reference
   let leftpoint = centrex - 20;
   let rightpoint = centrex + 20;
-  let outsidestarpointlength = 50;
-  let connecttoedge = 0;
+  let outsidestarpointlength = 20;
+  let connecttoedge = 20;
 
  //trying to implement an if statement for scale function
   if (centrex > 100 || centrex < 100) {
@@ -115,15 +109,15 @@ function DrawStar (middlestarX, middlestarY, scaleFactor = 1) {
 
 //colour functions (need to be here so it runs properly)
 //stroke colours
-  let basestrokec = color(0, 43, 77); //dark blue
-  let thickstrokec = color(255); //white
+  let basestrokec = color(255, 191, 222); //light pink
+  let thickstrokec = color(250); //white
 //fill colours
-let backlayerfill = color(0, 43, 77); //dark blue
-let secondlayerfill = color(48, 123, 179); //blue
-let thirdlayerfill = color(225); //white
-let fourthlayerfill = color(161, 216, 255); //light blue
-let fifthlayerfill = color(0, 43, 77); //dark blue
-let sixthlayerfill = color(48, 123, 179); //blue
+let backlayerfill = color(255, 191, 222); //light pink
+let secondlayerfill = color(255, 79, 164); //bright pink
+let thirdlayerfill = color(255); //white
+let fourthlayerfill = color(255, 79, 164); //bright pink
+let fifthlayerfill = color(255, 79, 164); //bright pink
+let sixthlayerfill = color(255, 191, 222); //light pink
 let frontlayerfill = color(255); //white
 
 //if function for stroke to turn white if its thicker 
